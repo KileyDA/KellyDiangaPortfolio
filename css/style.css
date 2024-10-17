@@ -230,7 +230,7 @@ header {
     text-align: center;
     -webkit-transition: all .5s;
     transition: all .5s;
-    height: 65px;
+    height: 12vh;
 }
 
 nav ul {
@@ -379,28 +379,31 @@ a.active {
 .section-experiences{
     position: relative;
     background-color: rgba(6, 223, 230, 0.195);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-left: 70px;
-    margin-right: 70px;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    margin-left: 10%;
+    margin-right: 10%;
     opacity: 1;
     border: 5px solid #2b2a2a; /* White border with a thickness of 5px */
     box-shadow: 0 20px 30px rgba(13, 1, 56, 0.2), /* Adds a shadow around the border */
                 0 12px 40px rgba(0, 0, 0, 0.2); /* Extra shadow for depth */
+    padding-left: 5%;
+    padding-right: 5%;
+   
 }
 
 .section-experiences:before {
     content: '';
     background-color: rgba(3, 217, 254, 0.5);
     width: 100%;
-    height: 1500px; 
+    height: 100vh; 
     
 }
 
 .overlay:after {
     content: '';
     width: 100%;
-    height: 500px; 
+    height: 50vh; 
     position: absolute;
     background-color: rgba(2, 42, 48, 0.5);
     top: 0;
@@ -408,16 +411,16 @@ a.active {
     z-index: 0;
 }
 .section-experiences .container {
-    padding: 150px 50px;
+    /*padding: 15% 5%;*/
     position: relative;
     background-color: #fff;
     box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4); /* Inner shadow */
     z-index: 1;
-    width: 80%;
+    width: 100%;
 }
 
 .experiences h4 {
-    margin: 5px 0;
+    margin: 5% 0;
     font-size: 24px;
     font-weight: 700;
 }
@@ -429,14 +432,14 @@ a.active {
 
 
 #experience {
-    padding: 50px 0;
+   padding: 1% 0;
     background: #f3f3f3;
     background: url(../img/portfolio/OIP.jpeg);
     background-size: cover;
 }
 
 .experience-row {
-    padding: 10px 0;
+   /* padding: 10px 0;*/
     border-bottom: 10px solid #ddd;
 }
 
@@ -473,7 +476,7 @@ a.active {
     position: absolute;
     top: 0;
     left: 2em;
-    width: 2px;
+    width: 2%;
     height: 100%;
 }
 
@@ -622,7 +625,7 @@ a.active {
     background-color: #fff;
     box-shadow: 0px 0px 40px 8px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    background: url(../img/portfolio/skills.jpg);
+    background: url(../img/portfolio/flower4.jpg);
     background-size: cover;
    
 }
@@ -1076,7 +1079,7 @@ fieldset {
 .my-info {
     font-family:  Helvetica, sans-serif; /* Modern, clean font */
     color: #333;
-    padding: 30px;
+    padding: 10%;
     background-color: #f9f9f9; /* Light background for contrast */
     border-radius: 250px; /* Rounded corners */
     box-shadow: 0 20px 30px rgba(1, 33, 36, 0.1); /* Light shadow for floating effect */
@@ -1091,14 +1094,14 @@ fieldset {
 .my-info h3, 
 .my-info p  {
     font-family: 'Playfair Display', serif;
-    left:-25%;
+    left:-30%;
     position: relative;
     font-size: 18px;
     top:-290%;
-    margin-top: -10px;
+    margin-top: -1%;
     padding-bottom: 30px;
-    padding-left: 50px;
-    line-height: 0.5; /* Reduce line height for tighter spacing */
+    padding-left: 55px;
+    line-height: 1; /* Reduce line height for tighter spacing */
 }
 
 
