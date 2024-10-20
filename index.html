@@ -19,7 +19,9 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      
     <![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 </head>
 
 <body>
@@ -105,10 +107,10 @@
                     <span class="close-button" id="closeBtn">&times;</span>
                     
                     <!-- Add a download button inside the modal -->
-                  <!--  <a href="pdfs/Blue Simple Professional CV Resume (4).pdf" download="My_Resume.pdf" class="download-btn">Download PDF</a>-->
+                    <a href="pdfs/Blue Simple Professional CV Resume (4).pdf" download="My_Resume.pdf" class="download-btn">Download PDF</a>
                     
-                    <!-- Display the PDF in an iframe -->
-                    <iframe src="pdfs/Blue Simple Professional CV Resume (4).pdf" frameborder="0"></iframe>
+                    <!-- Canvas for rendering the PDF -->
+                    <canvas id="pdf-canvas"></canvas>
                 </div>
             </div>
 
