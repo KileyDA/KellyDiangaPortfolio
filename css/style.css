@@ -418,6 +418,11 @@ a.active {
 #pdfModal .close-button:hover {
     color: #ccc;
 }
+canvas {
+    display: block; /* Ensure canvas is a block element */
+    width: 100%; /* Make canvas responsive */
+    height: auto; /* Maintain aspect ratio */
+}
 
 /* Styling for the download button */
 .download-btn {
