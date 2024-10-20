@@ -140,24 +140,39 @@ function initSlideshows() {
     window.location.href = `mailto:kellydianga711@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 }
 
- // Get the modal and the view button
-var modal = document.getElementById("pdfModal");
-var btn = document.getElementById("pdfBtn");
-var span = document.getElementById("closeBtn");
+ // Select the canvas element
+const canvas = document.getElementById('pdf-canvas');
+const context = canvas.getContext('2d');
 
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
+// Function to load the PDF
+function loadPDF() {
+    const pdfUrl = 'pdfs/Blue Simple Professional CV Resume (4).pdf';
+
+    // Load the PDF
+    pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+        // Fetch the first page
+        pdf.getPage(1).then(page => {
+            const viewport = page.getViewport({ scale: 1.5 }); // Adjust the scale as needed
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            // Render the page into the canvas context
+            const renderContext = {
+                canvasContext: context,
+                viewport: viewport
+            };
+            page.render(renderContext);
+        });
+    });
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
+// Event listener to open the modal and load the PDF
+document.getElementById('pdfBtn').addEventListener('click', () => {
+    document.getElementById('pdfModal').style.display = 'block';
+    loadPDF(); // Load the PDF when the modal opens
+});
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+// Event listener to close the modal
+document.getElementById('closeBtn').addEventListener('click', () => {
+    document.getElementById('pdfModal').style.display = 'none';
+});
