@@ -827,46 +827,6 @@
     </div>
 </div>
 
- <!--DEMO08-->
- <div id="animatedModal08" class="popup-modal">
-    <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
-    <div id="btn-close-modal1" class="close-animatedModal08 close-popup-modal1"> <i class="ion-close-round"></i> </div>
-    <div class="clearfix"></div>
-    <div class="modal-content">
-        <div class="container">
-            <div class="portfolio-padding">
-                <div class="col-md-8 col-md-offset-2">
-                    <h2>Traffic Light <br /> Control System</h2>
-                    <div class="h-50"></div>
-                    <p>This design exercise involved the creation of a controller for a traffic intersection, responsible for managing both the traffic and pedestrian walk lights. The intersection was designed with specific operational requirements. The roads were one-way streets where vehicles could only travel straight, with no turns allowed. Initially, the East-West traffic light remained green for an extended period. When a North-South car was detected, the traffic lights would cycle to green in that direction and hold for a short duration. The pedestrian walk light would only be activated if a pedestrian was detected either before the light turned green or during the hold period. After the short duration, if no car or pedestrian was detected on the East-West side, the green light remained for the North-South direction.</p>
-                    <p>If a North-South pedestrian was detected, the traffic lights similarly cycled, and the appropriate walk light was displayed for a short interval. If no East-West car was detected, the North-South light remained green. In cases where cars were detected in both directions, the lights cycled for both directions, allowing each side the mandatory short duration. If a pedestrian wished to cross with traffic while a car or pedestrian was present on the opposite road, the lights cycled before granting the walk light to the first-mentioned pedestrian. Once the lights changed to green for a particular direction, they stayed green for a minimum time before another change was allowed. The lights remained green unless an input situation, such as the detection of a car or pedestrian, required a cycle. The design ensured that both directions displayed red for safety before switching to green for the other side.</p>
-                    <p>The design also included a countdown timer, displaying the remaining time from green to amber or from red to green, ensuring drivers and pedestrians were aware of the timing of light changes. The intersection was symmetrical, meaning neither road had precedence, and the design principles were applied equally in both directions. Pedestrian buttons were designed to only be pressed briefly, as they would in a real-world scenario, while car detectors were held as long as the car remained in position, ensuring vehicles were only considered if they stayed long enough for the light change.</p>
-                    <p>The project incorporated a timer with multiple outputs representing various time delays and a state machine to serve as the system's intelligence. The state machine controlled the timer and the lights, responding to the timer outputs, synchronized car buttons, and pedestrian buttons. The system was designed with safety considerations, ensuring that all inputs were handled correctly and efficiently.</p>
-                    <br />
-                    <br /> 
-                      <!-- Section to display the PDF -->
-                      <div class="pdf-container">
-                        <h3><b>Project Report</b></h3>
-                        <!-- Display PDF using iframe or embed -->
-                        <iframe src="pdfs/KELLY DIANGA- VHDL PROJECT(TRAFFIC CONTROL SYSTEM) REPORT.pdf" loading="lazy" width="100%" height="600vh"></iframe>
-                    </div>
-                    <br />
-                    <br />
-                    
-                    <br />
-                    <br /> 
-                    <!-- Close button at the end of the content -->
-                    <div class="button-container">
-                        <button class="btn btn-primary close-animatedModal08">Back</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
- 
-
  <!--DEMO10-->
  <div id="animatedModal10" class="popup-modal">
     <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
