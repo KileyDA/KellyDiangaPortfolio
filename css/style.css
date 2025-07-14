@@ -906,17 +906,18 @@ a.active {
     background: #ffffff;
     width: 80%;
     left: 10%;
-    top: 10%; /* Space from the top */
+    top: 5%; /* Space from the top */
     margin-bottom: 10%; /* Space from the bottom */
     position: relative;
-    padding: 20px; /* Space inside the modal */
+    padding: 2px; /* Space inside the modal */
+    padding-right: -10px;
 
     /* Inner frame */
-    border: 10px solid #b0b0b0; /* Inner frame color (light grey) */
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inset shadow for depth */
+    border: 5px solid #b0b0b0; /* Inner frame color (light grey) */
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2); /* Inset shadow for depth */
 
     /* Outer frame (2nd step) */
-    outline: 20px solid #7f7f7f; /* Outer frame color (medium grey) */
+    outline: 7px solid #464545; /* Outer frame color (medium grey) */
     
     /* No border-radius for sharp corners */
     border-radius: 0;
@@ -924,17 +925,15 @@ a.active {
     /* Shadow for 3D effect */
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3), /* Outer shadow for depth */
                 inset 0 0 10px rgba(0, 0, 0, 0.4); /* Inset shadow to enhance inner frame */
-    background-image: url(../img/portfolio/flow1.jpg) ;
-     background-size: cover; /* Ensures the background image covers the entire container */
-     background-position: center; /* Centers the background image */
-     background-repeat: no-repeat; /* Prevents the background image from repeating */
-     
     
 }
 
 .popup-modal {
-    background: #f7f6f6 !important; 
-     
+    /*background: #f7f6f6 !important; */
+    background-image: url(../img/portfolio/lapbg3.jpg);
+    background-size: cover; /* Ensures the background image covers the entire container */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */ 
     /* filter: grayscale(100%);*/
     
  }
@@ -944,16 +943,18 @@ a.active {
 /* Close button styling */
 .close-popup-modal1 {
     position: absolute;
-    top: 1px;              /* Distance from the top */
-    right: 1px;            /* Distance from the right side */
-    font-size: 24px;        /* Size of the "X" icon */
-    color: #020b39;            /* Icon color */
-    background: none;       /* No background for the button */
+    top: 5px;              /* Distance from the top */
+    right: 10px;            /* Distance from the right side */
+    font-size: 50px;        /* Size of the "X" icon */
+    color: #ffffff;            /* Icon color */
+    background: #ed0606;      /* No background for the button */
     border: none;           /* No border */
     cursor: pointer;        /* Pointer cursor on hover */
-    z-index: 1000;          /* Ensure it stays above other elements */
+    z-index: 1000; 
+    padding: 5px;
+    padding-right:10px ; 
+    padding-left:10px ;         /* Ensure it stays above other elements */
 }
-
 /* Hover effect */
 .close-popup-modal1:hover {
     color: #1999f6;         /* Change color when hovered */
