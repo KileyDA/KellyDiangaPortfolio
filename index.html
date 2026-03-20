@@ -85,7 +85,7 @@
                 <img src="img/portfolio/kelly3.jpeg" width="400" class="img-responsive" loading="lazy" alt="" align="right" data-aos="fade-right" data-aos-delay="0" />
             </div>
              <!-- Button to download pdf-->
-            <a href="pdfs/Kelly Dianga CV.pdf" download="Kelly_Dianga_CV.pdf" class="pdf-button">Download My CV</a>
+            <a href="pdfs/Kelly_Dianga_CV.pdf" download="Kelly_Dianga_CV.pdf" class="pdf-button">Download My CV</a>
             
 
         </div>
@@ -467,6 +467,22 @@
                                             <div class="item_info">
                                                 <span>Assembly Language and Analogue to Digital Conversion</span>
                                                 <em>ARM assembly and embedded C programming, ADC configuration and scaling, GPIO bit manipulation, and seven-segment display control on a microcontroller.</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6 embedded">
+                                <a id="demo22" href="#animatedModal25" class="portfolio_item" data-modal-target="animatedModal25">
+                                    <img src="img/portfolio/vhdl1.png" loading="lazy" alt="image" class="img-responsive" />
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info">
+                                                <span>VHDL Traffic Light Control System</span>
+                                                <em>VHDL, Xilinx ISE, CoolRunner2 CPLD, Finite State Machine, Synchronous Logic, Testbench Simulation</em>
                                             </div>
                                         </div>
                                     </div>
@@ -1836,6 +1852,85 @@
                         <br />
                         <br />
                         <p>The final system demonstrates effective hardware–software integration, combining low-level assembly, C programming, ADC scaling, and GPIO control.</p>
+                        <!-- Close button at the end of the content -->
+                        <div class="button-container">
+                            <button class="btn btn-primary close-animatedModal24">Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--DEMO25-->
+    <div id="animatedModal25" class="popup-modal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+        <div id="btn-close-modal25" class="close-animatedModal25 close-popup-modal1"> <i class="ion-close-round"></i> </div>
+        <div class="clearfix"></div>
+        <div class="modal-content">
+            <div class="container">
+                <div class="portfolio-padding">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>VHDL Traffic Light Control System</h2>
+                        <div class="h-50"></div>
+                        <p>This project involved designing and synthesising a traffic light control system in VHDL, targeting a CoolRunner2 CPLD using Xilinx ISE.</p>
+                        <p>The system manages traffic and pedestrian lights across East-West (EW) and North-South (NS) lanes through three interconnected modules, achieving a clean synthesis with 0 errors and 0 warnings.</p>
+                        <br />
+                        <h5><b>System Overview</b></h5>
+                        <ul>
+                            <li>A 10-state Finite State Machine controls light sequencing across EW and NS lanes, handling vehicles, pedestrians, and simultaneous inputs from both directions.</li>
+                            <li>An Input Sync Memory module clock-synchronises car sensor inputs and latches pedestrian button presses, retaining them until the state machine issues a clear signal, ensuring no button press is missed.</li>
+                            <li>The Traffic Top Level module combines both sub-modules into a single integrated system with 6 inputs and full light, LED counter, and sync outputs.</li>
+                            <li>Traffic lights are encoded as 2-bit values: 00 = Red, 01 = Amber, 10 = Green, 11 = Both traffic and pedestrian lights green.</li>
+                        </ul>
+
+                         <h5><b>Key Features</b></h5>
+                        <ul>
+                            <li>10-state, 26-transition FSM with automatic one-hot encoding applied by Xilinx ISE during synthesis.</li>
+                            <li>Synchronous state transitions on rising clock edge with asynchronous reset to EWGreen_Idle.</li>
+                            <li>Moore-style outputs for traffic light control; Mealy-style outputs for timer management.</li>
+                            <li>4-bit counter with defined constants for 2 s, 3 s, and 10 s state delays.</li>
+                            <li>Priority handling: the system serves whichever direction (or pedestrian) triggers first, then cycles back for the second.</li>
+                        </ul>
+                        
+                        <h5><b>Implementation Highlights</b></h5>
+                        <ul>
+                            <li>Three VHDL modules designed, implemented, and integrated: Input Sync Memory, State Machine, and Traffic Top Level.</li>
+                            <li>Pedestrian button memory implemented using a synchronous latch, cleared only when the corresponding pedestrian green state is reached.</li>
+                            <li>Comprehensive testbenches written and simulated covering 6+ scenarios: EW traffic only, NS traffic only, simultaneous EW/NS traffic, EW pedestrian only, NS pedestrian only, mixed pedestrian and vehicle inputs, and button-press priority ordering.</li>
+                            <li>Synthesised for CoolRunner2 CPLDs; final design utilises 22 flip-flops, 197 logic cells, and 18 I/O buffers.</li>
+                        </ul>
+                        <h5><b>Advantages</b></h5>
+                        <ul>
+                            <li>Fully automated light sequencing with no manual intervention required.</li>
+                            <li>Pedestrian button memory ensures requests are never dropped even if the button is released before the state is reached.</li>
+                            <li>Priority-sensitive design correctly handles simultaneous inputs from both lanes..</li>
+                            <li>Clean synthesis with zero errors and zero warnings.</li>
+                        </ul>
+                        <h5><b>Disadvantages</b></h5>
+                        <ul>
+                         <li>State machine tested in simulation only, no physical hardware deployment.</li>
+                         <li>Fixed time delays (2 s, 3 s, 10 s) with no runtime adjustment capability.</li>   
+                         <li>False motion triggers are not accounted for in the current design.</li>
+                        </ul>
+                        <br />
+                          <!-- Section to display the PDF -->
+                        <div class="pdf-container">
+                            <h3><b>Project Paper</b></h3>
+                            <!-- Display PDF using iframe or embed -->
+                            <iframe src="pdfs/Kelly_Dianga_VHDL_Traffic_Control_System.pdf" loading="lazy" width="100%" height="600vh"></iframe>
+                        </div>
+
+                        <!-- Section to download the PDF -->
+                        <div class="download-container">
+                            <!-- Download PDF link -->
+                            <a href="pdfs/Kelly_Dianga_VHDL_Traffic_Control_System.pdf" download="desired-filename.pdf" class="download-button">
+                                Download Project Paper
+                            </a>
+                        </div>
+                         <br /><br /><br />
+                        <br />
+                        <br />
                         <!-- Close button at the end of the content -->
                         <div class="button-container">
                             <button class="btn btn-primary close-animatedModal24">Back</button>
