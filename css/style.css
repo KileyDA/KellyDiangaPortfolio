@@ -348,49 +348,363 @@ a.active {
     box-shadow: 0px 14px 22px 0px rgba(0, 0, 0, 0.15);
 }
 
-/* Section About
-==================================================*/
-
+/* ============================================================
+   Section: About
+   Layout: Brown text left | Curved photo right
+   Curve type: Deep concave arc on left edge of photo panel
+============================================================ */
+ 
 #about {
-    padding: 50px 0;
+    padding: 0;
 }
-
-.about-img-div img {
-    margin: 0 auto;
+ 
+/* Full-bleed flex row — fills viewport height */
+.about-inner {
+    display: flex;
+    align-items: stretch;
+    min-height: 92vh;
+    overflow: hidden;
+    position: relative;
 }
-
-.about-border {
+ 
+/* ─── LEFT: brown text panel ──────────────────────── */
+.about-text-panel {
+    flex: 0 0 54%;
+    background: #2C1F0E;
+    padding: 80px 80px 80px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+ 
+/* Amber top accent bar */
+.about-text-panel::before {
+    content: '';
     position: absolute;
-    border: 18px solid #475455;
-    width: 93%;/*466px*/
-    height: 90%;/*605px*/
-    top: 12%;/*220px*/
-    left: 1%;/*2px*/
-    z-index: 1;
-    box-shadow: 15px 30px 20px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow around the image */
-    margin: 0 auto;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(to right, #C4A882, #E8C99A);
 }
-
-/* Styling for the view button */
+ 
+/* Faint watermark number */
+.about-text-panel::after {
+    content: '01';
+    position: absolute;
+    bottom: -20px;
+    right: 24px;
+    font-size: 220px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.03);
+    line-height: 1;
+    pointer-events: none;
+    letter-spacing: -6px;
+}
+ 
+/* Eyebrow */
+.about-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+ 
+.about-eyebrow-line {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: #C4A882;
+    flex-shrink: 0;
+}
+ 
+.about-eyebrow-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #C4A882;
+}
+ 
+/* Heading */
+.about-heading {
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0 0 20px;
+    position: relative;
+    z-index: 1;
+}
+ 
+/* Amber rule */
+.about-rule {
+    width: 36px;
+    height: 2px;
+    background: #C4A882;
+    border: none;
+    margin: 0 0 28px;
+    position: relative;
+    z-index: 1;
+}
+ 
+/* Body text */
+.about-body {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+ 
+.about-body p {
+    font-size: 15px;
+    line-height: 1.85;
+    color: #b0927a;
+    margin-bottom: 14px;
+}
+ 
+/* Buttons */
+.about-btns {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+ 
 .pdf-button {
     display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
+    background: #C4A882;
+    color: #2C1F0E;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 11px 26px;
+    border-radius: 4px;
+    text-decoration: none;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-    margin-left: 110px; /* Moves the button slightly to the left */
-    margin-top: 30px;
-    top: -20%;
+    transition: background 0.2s ease, color 0.2s ease;
 }
-
+ 
 .pdf-button:hover {
-    background-color: #45a049;
+    background: #E8C99A;
+    color: #2C1F0E;
+    text-decoration: none;
 }
+ 
+.pdf-button-outline {
+    display: inline-block;
+    border: 1px solid rgba(196, 168, 130, 0.4);
+    color: #C4A882;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+ 
+.pdf-button-outline:hover {
+    background: rgba(196, 168, 130, 0.1);
+    color: #E8C99A;
+    border-color: rgba(196, 168, 130, 0.7);
+    text-decoration: none;
+}
+ 
+/* ─── RIGHT: photo panel ──────────────────────────── */
+.about-photo-panel {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    /* Pull left so the curve mask overlaps the brown panel edge */
+    margin-left: -70px;
+    z-index: 1;
+}
+ 
+/* The actual photo — fills the panel */
+.about-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    z-index: 0;
+}
+ 
+/*
+ * Concave arc mask — painted in the same brown as the text panel.
+ * clip-path path breakdown:
+ *   M 0 0       — top-left corner
+ *   L 70 0      — across to 70px from left at top
+ *   Q 10 50% 70 100% — quadratic bezier: control point pulls LEFT at midpoint
+ *                       creating the concave arc
+ *   L 0 100%    — back to left edge at bottom
+ *   Z           — close
+ *
+ * Increase the control point X (10) to make the curve shallower.
+ * Decrease it (or go negative) to make it deeper.
+ */
+.about-curve-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    background: #2C1F0E;
+    clip-path: path('M 0 0 L 80 0 Q 20 400 80 800 L 0 800 Z');
+    z-index: 2;
+}
+ 
+/* Dark gradient at the bottom of the photo — makes chips/name legible */
+.about-photo-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 58%;
+    background: linear-gradient(
+        to top,
+        rgba(44, 31, 14, 0.97) 0%,
+        rgba(44, 31, 14, 0.6) 50%,
+        transparent 100%
+    );
+    z-index: 3;
+}
+ 
+/* Name + chips overlay pinned to bottom of photo
+ * Left padding must clear the curve mask (~80px) plus breathing room
+ */
+.about-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    padding: 20px 28px 32px 96px; /* 96px left clears the 80px curve + gives margin */
+}
+ 
+.about-nc-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 3px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+ 
+.about-nc-role {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #C4A882;
+    margin: 0 0 14px;
+    white-space: nowrap;
+}
+ 
+/* Stat chips */
+.about-chips {
+    display: flex;
+    gap: 10px;
+}
+ 
+.about-chip {
+    flex: 1;
+    min-width: 0;            /* allows flex children to shrink below content size */
+    background: rgba(196, 168, 130, 0.15);
+    border: 1px solid rgba(196, 168, 130, 0.35);
+    border-radius: 8px;
+    padding: 10px 8px;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+ 
+.about-chip:hover {
+    background: rgba(196, 168, 130, 0.25);
+}
+ 
+.about-chip-num {
+    font-size: 22px;
+    font-weight: 700;
+    color: #E8C99A;
+    line-height: 1;
+}
+ 
+.about-chip-lbl {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(196, 168, 130, 0.65);
+    margin-top: 3px;
+    word-break: break-word; /* wraps if panel is narrow */
+}
+ 
+/* ─── Responsive ──────────────────────────────────── */
+@media (max-width: 960px) {
+    .about-inner {
+        flex-direction: column;
+        min-height: auto;
+    }
+ 
+    .about-text-panel {
+        flex: none;
+        width: 100%;
+        padding: 60px 6% 50px;
+    }
+ 
+    .about-text-panel::after {
+        font-size: 140px;
+    }
+ 
+    .about-photo-panel {
+        flex: none;
+        width: 100%;
+        height: 520px;
+        margin-left: 0;
+    }
+ 
+    /* No curve needed when stacked vertically */
+    .about-curve-mask {
+        display: none;
+    }
+ 
+    .about-overlay {
+        padding: 20px 24px 28px;
+    }
+}
+ 
+@media (max-width: 600px) {
+    .about-heading {
+        font-size: 38px;
+    }
+ 
+    .about-chips {
+        gap: 8px;
+    }
+ 
+    .about-chip-num {
+        font-size: 18px;
+    }
+ 
+    .about-btns {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+ 
+
 /* Section: Experience
 ==================================================*/
 
