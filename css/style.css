@@ -580,48 +580,226 @@ a.active {
     padding: 0.25em 1em 0.2em 1em;
 }
 
-
 /* Skills section
 ==================================================*/
-.section-title {
-    margin-top: 50px;   /* space ABOVE the title */
-    margin-bottom: 30px; /* space BELOW the title */
-    color: green;
-}
-.section-title2 {
-    margin-top: 40px;   /* space ABOVE the title */
-}
-.section-skills {
-    padding-bottom: 30px;
 
-}
-
-.skill + .skill {
-    margin-top: 25px;
-}
-
-.skill h4 {
-    font-size: 24px;
+/* Section heading treatment */
+.sk-section-label {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    margin: 0 0 15px;
+    color: #2d6a4f;
+    margin: 0 0 6px;
+    padding: 0;
 }
 
+.sk-section-title {
+    font-size: 25px;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin: 0 0 8px;
+    padding: 0;
+    letter-spacing: 0.02em;
+}
+
+.sk-rule {
+    width: 36px;
+    height: 2px;
+    background: #2d6a4f;
+    border: none;
+    margin: 0 0 28px;
+}
+
+/* Subsection dividers */
+.sk-subsection-label {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #999;
+    margin: 30px 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sk-subsection-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #ebebeb;
+}
+
+/* Skills grid - 2 column */
+.sk-skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 50px;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+    .sk-skills-grid { grid-template-columns: 1fr; }
+}
+
+.sk-skill-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.sk-skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.sk-skill-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.sk-skill-pct {
+    font-size: 15px;
+    color: #aaa;
+    font-weight: 400;
+}
+
+/* Progress bars - slim and refined */
 .progress {
-    height: 7px;
+    height: 3px;
     margin-bottom: 0;
-    border-radius: 0;
-    background-color: #dfdfdf;
-    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow around the image */
+    border-radius: 2px;
+    background-color: #efefef;
+    box-shadow: none;
 }
 
 .progress-bar {
     background-color: #212121;
+    border-radius: 2px;
+}
+
+/* Embedded systems cards */
+.emb-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 1rem;
+    margin-bottom: 36px;
+}
+
+@media (max-width: 600px) {
+    .emb-grid { grid-template-columns: 1fr; }
+}
+
+.emb-card {
+    background: #ffffff;
+    border: 1px solid #e8ede9;
+    border-radius: 0;
+    border-left: 2px solid #2d6a4f;
+    padding: 16px 18px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.2s ease;
+    cursor: default;
+}
+
+.emb-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(45, 106, 79, 0.1);
+    border-left-color: #1a4731;
+}
+
+.emb-card-title {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2d6a4f;
+    margin-bottom: 10px;
+    transition: color 0.2s ease;
+}
+
+.emb-card:hover .emb-card-title {
+    color: #1a4731;
+}
+
+.emb-tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.emb-tag {
+    background: #f0f7ec;
+    color: #2d6a4f;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 2px;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.emb-card:hover .emb-tag {
+    background: #d4ebc4;
+    color: #1a4731;
+}
+
+/* Pill rows for Specializations and Soft Skills */
+.pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.sk-pill {
+    background: #f5f5f5;
+    color: #444;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 16px;
+    border-radius: 2px;
+    letter-spacing: 0.03em;
+    border: 1px solid #e2e2e2;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    cursor: default;
+}
+
+.sk-pill:hover {
+    background: #eaf3de;
+    border-color: #2d6a4f;
+    color: #2d6a4f;
+}
+
+.soft-pill {
+    background: #ffffff;
+    color: #2d6a4f;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 16px;
+    border-radius: 2px;
+    letter-spacing: 0.03em;
+    border: 1px solid #c2dbb8;
+    transition: background 0.2s ease, color 0.2s ease;
+    cursor: default;
+}
+
+.soft-pill:hover {
+    background: #2d6a4f;
+    color: #ffffff;
+}
+
+/* Keep existing layout styles */
+.section-skills {
+    padding-bottom: 30px;
 }
 
 .section-services {
     position: relative;
-
-
 }
 
 .section-services:before {
@@ -638,7 +816,7 @@ a.active {
     width: 100%;
     height: 400px;
     position: absolute;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     top: 0;
     left: 0;
     z-index: 0;
@@ -652,17 +830,16 @@ a.active {
     z-index: 1;
     background: url(../img/portfolio/flower4.jpg);
     background-size: cover;
-
 }
-.section-services .containers {
 
+.section-services .containers {
     background-color: #fff;
     box-shadow: 20px 20px 50px 12px rgba(0.2, 0.2, 0.2, 0.2);
     width: 100%;
-    height: 70%;/*500px*/
+    height: 70%;
     padding: 60px 50px;
-
 }
+
 .service h4 {
     margin: 25px 0;
     font-size: 24px;
@@ -674,30 +851,6 @@ a.active {
     margin-bottom: 0;
 }
 
-.styled-list {
-    list-style-type: none; /* Remove default bullets */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    font-family: 'Helvetica', sans-serif; /* Stylish font */
-    font-size: 18px; /* Adjust text size */
-    line-height: 1.6; /* Spacing between lines */
-    color: #333; /* Text color */
-}
-
-.styled-list li {
-    background-color: #f2f2f2; /* Light background for list items */
-    padding: 10px 15px; /* Spacing inside the items */
-    margin-bottom: 10px; /* Space between list items */
-    border-left: 5px solid #0e49b0; /* Add a left border for a nice effect */
-    border-radius: 4px; /* Optional: rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    transition: background-color 0.3s ease; /* Smooth background change on hover */
-}
-
-.styled-list li:hover {
-    background-color: #e0e0e0; /* Change background on hover */
-    cursor: pointer; /* Pointer cursor to indicate hover */
-}
 
 /* projects section
 ==================================================*/
