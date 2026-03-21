@@ -717,10 +717,11 @@ a.active {
     background: url(../img/portfolio/OIP.jpeg);
     background-size: cover;
 }
- 
+
 .section-experiences {
     position: relative;
-    background-color: rgba(6, 223, 230, 0.195);
+    /* CHANGED: teal removed → radial vignette dark edges, clear centre */
+    background: radial-gradient(ellipse at center, rgba(37,32,24,0.05) 0%, rgba(20,12,4,0.72) 100%);
     padding-top: 2.5%;
     padding-bottom: 2.5%;
     margin-left: 5%;
@@ -731,25 +732,27 @@ a.active {
     padding-left: 5%;
     padding-right: 5%;
 }
- 
+
 .section-experiences:before {
     content: '';
-    background-color: rgba(3, 217, 254, 0.5);
+    /* CHANGED: teal removed → transparent */
+    background-color: transparent;
     width: 100%;
     height: 100vh;
 }
- 
+
 .overlay:after {
     content: '';
     width: 100%;
     height: 50vh;
     position: absolute;
-    background-color: rgba(2, 42, 48, 0.5);
+    /* CHANGED: rgba(2,42,48,0.5) dark teal → warm dark brown */
+    background-color: rgba(20, 12, 4, 0.3);
     top: 0;
     left: 0;
     z-index: 0;
 }
- 
+
 /* Container — switched from white box to transparent
    so exp-inner controls the look */
 .section-experiences .container {
@@ -760,10 +763,9 @@ a.active {
     width: 100%;
     padding: 0;
 }
- 
 /* ── Inner warm cream wrapper ── */
 .exp-inner {
-    background: #FAF3E8;
+    background: #ffffff;
     padding: 56px 60px;
     position: relative;
     overflow: hidden;
@@ -821,7 +823,7 @@ a.active {
 }
  
 .exp-title {
-    font-size: 36px;
+    font-size: 45px;
     font-weight: 300;
     color: #2C1F0E;
     margin: 0;
@@ -1012,228 +1014,36 @@ a.active {
 }
 
 
-/* Skills section
-==================================================*/
-
-/* Section heading treatment */
-.sk-section-label {
-    font-size: 30px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #2d6a4f;
-    margin: 0 0 6px;
-    padding: 0;
+/* ============================================================
+   Skills Section — Design D
+   Palette 6: Warm charcoal nav · white content · gold labels ·
+              near-black titles · taupe bars · gold % only
+============================================================ */
+ 
+/* ── Bootstrap overrides ─────────────────────────────── */
+#service,
+#service .site-section,
+#service .container,
+#service .container .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
-
-.sk-section-title {
-    font-size: 20px;
-    font-weight: 300;
-     color: #425BB5;
-    margin: 0 0 8px;
-    padding: 0;
-    letter-spacing: 0.02em;
-}
-
-.sk-rule {
-    width: 36px;
-    height: 2px;
-    background: #2d6a4f;
-    border: none;
-    margin: 0 0 28px;
-}
-
-/* Subsection dividers */
-.sk-subsection-label {
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #999;
-    margin: 30px 0 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.sk-subsection-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: #ebebeb;
-}
-
-/* Skills grid - 2 column */
-.sk-skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 50px;
-    margin-bottom: 8px;
-}
-
-@media (max-width: 600px) {
-    .sk-skills-grid { grid-template-columns: 1fr; }
-}
-
-.sk-skill-item {
-    padding: 10px 0;
-    border-bottom: 1px solid #f2f2f2;
-}
-
-.sk-skill-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 8px;
-}
-
-.sk-skill-name {
-    font-size: 12px;
-    font-weight: 600;
-    color: #1a1a1a;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-}
-
-.sk-skill-pct {
-    font-size: 15px;
-    color: #aaa;
-    font-weight: 400;
-}
-
-/* Progress bars - slim and refined */
-.progress {
-    height: 3px;
-    margin-bottom: 0;
-    border-radius: 2px;
-    background-color: #efefef;
-    box-shadow: none;
-}
-
-.progress-bar {
-    background-color: #212121;
-    border-radius: 2px;
-}
-
-/* Embedded systems cards */
-.emb-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-top: 1rem;
-    margin-bottom: 36px;
-}
-
-@media (max-width: 600px) {
-    .emb-grid { grid-template-columns: 1fr; }
-}
-
-.emb-card {
-    background: #ffffff;
-    border: 1px solid #e8ede9;
-    border-radius: 0;
-    border-left: 2px solid #2d6a4f;
-    padding: 16px 18px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.2s ease;
-    cursor: default;
-}
-
-.emb-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(45, 106, 79, 0.1);
-    border-left-color: #1a4731;
-}
-
-.emb-card-title {
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #2d6a4f;
-    margin-bottom: 10px;
-    transition: color 0.2s ease;
-}
-
-.emb-card:hover .emb-card-title {
-    color: #1a4731;
-}
-
-.emb-tag-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-.emb-tag {
-    background: #f0f7ec;
-    color: #2d6a4f;
-    font-size: 11px;
-    font-weight: 500;
-    padding: 3px 9px;
-    border-radius: 2px;
-    letter-spacing: 0.02em;
-    transition: background 0.2s ease, color 0.2s ease;
-}
-
-.emb-card:hover .emb-tag {
-    background: #d4ebc4;
-    color: #1a4731;
-}
-
-/* Pill rows for Specializations and Soft Skills */
-.pill-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 12px;
-}
-
-.sk-pill {
-    background: #f5f5f5;
-    color: #444;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 7px 16px;
-    border-radius: 2px;
-    letter-spacing: 0.03em;
-    border: 1px solid #e2e2e2;
-    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-    cursor: default;
-}
-
-.sk-pill:hover {
-    background: #eaf3de;
-    border-color: #2d6a4f;
-    color: #2d6a4f;
-}
-
-.soft-pill {
-    background: #ffffff;
-    color: #2d6a4f;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 7px 16px;
-    border-radius: 2px;
-    letter-spacing: 0.03em;
-    border: 1px solid #c2dbb8;
-    transition: background 0.2s ease, color 0.2s ease;
-    cursor: default;
-}
-
-.soft-pill:hover {
-    background: #2d6a4f;
-    color: #ffffff;
-}
-
-/* Keep existing layout styles */
-.section-skills {
-    padding-bottom: 30px;
-}
-
+ 
+#skills,
 .section-services {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
     position: relative;
 }
-
+ 
 .section-services:before {
     content: '';
     width: 100%;
@@ -1242,7 +1052,7 @@ a.active {
     left: 0;
     top: 0;
 }
-
+ 
 .overlay:after {
     content: '';
     width: 100%;
@@ -1253,35 +1063,476 @@ a.active {
     left: 0;
     z-index: 0;
 }
-
+ 
+/* Outer container — flower background preserved */
 .section-services .container {
-    padding: 40px 30px;
     position: relative;
-    background-color: #fff;
-    box-shadow: 0px 0px 40px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1;
     background: url(../img/portfolio/flower4.jpg);
     background-size: cover;
-}
-
-.section-services .containers {
-    background-color: #fff;
-    box-shadow: 20px 20px 50px 12px rgba(0.2, 0.2, 0.2, 0.2);
+    background-position: center;
+    box-shadow: 0px 0px 40px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
     width: 100%;
-    height: 70%;
-    padding: 60px 50px;
+    max-width: 100%;
+    height: auto;
+    padding: 0;
 }
-
-.service h4 {
-    margin: 25px 0;
-    font-size: 24px;
+ 
+/* Inner box */
+.section-services .containers {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 20px 20px 50px 12px rgba(20, 12, 4, 0.18);
+}
+ 
+/* ── Design D: two-column layout ─────────────────────── */
+.sk-layout {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+ 
+/* ── LEFT: charcoal nav panel──────────── */
+.sk-nav-panel {
+    flex: 0 0 350px;
+    width: 350px;
+    min-width: 350px;
+    background: #252018;
+    padding: 48px 0 48px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+ 
+.sk-nav-panel::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(to right, #D4A855, #C4A882);
+}
+ 
+.sk-nav-panel::after {
+    content: '03';
+    position: absolute;
+    bottom: -16px;
+    right: 8px;
+    font-size: 100px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.04);
+    line-height: 1;
+    pointer-events: none;
+    letter-spacing: -3px;
+}
+ 
+.sk-nav-top {
+    padding: 0 28px 28px;
+    width: 100%;
+}
+ 
+.sk-nav-label {
+    font-size: 15px;
     font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #D4A855;
+    margin: 0 0 8px;
+    text-align: left;
+    display: block;
 }
-
-.service p {
-    color: #000;
+ 
+.sk-nav-title {
+    font-size: 45px;
+    font-weight: 300;
+    color: #FDF8F0;
+    margin: 0 0 18px;
+    line-height: 1.1;
+    text-align: left;
+}
+ 
+.sk-nav-rule {
+    width: 22px;
+    height: 1px;
+    background: rgba(212, 168, 85, 0.4);
+    border: none;
+    margin: 0;
+    display: block;
+}
+ 
+.sk-nav-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 16px 0 0;
+    margin: 0;
+    list-style: none;
+    gap: 0;
+}
+ 
+.sk-nav-item {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(253, 248, 240, 0.38) !important;
+    padding: 11px 28px;
+    border-left: 2px solid transparent;
+    text-decoration: none !important;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+    text-align: left;
+}
+ 
+.sk-nav-item:hover,
+.sk-nav-item.sk-nav-item-active {
+    color: #FDF8F0 !important;
+    border-left-color: #D4A855;
+    background: rgba(212, 168, 85, 0.08);
+    text-decoration: none !important;
+}
+ 
+/* ── RIGHT: content panel — PALETTE 6 ──────────────── */
+ 
+/*
+   Palette 6 colour tokens:
+   Content bg:      #ffffff
+   Glow:            #D4A855 @ 10% opacity
+   Section labels:  #D4A855  (gold — small uppercase only)
+   Section titles:  #1C1C1A  (near-black — clear, not brown)
+   Accent rule:     rgba(212,168,85,0.35)
+   Subsection lbl:  #D4A855  (same gold thread)
+   Divider lines:   #ececea  (neutral warm grey)
+   Skill names:     #1C1C1A  (near-black)
+   Skill %:         #D4A855  (gold — the pop of warmth)
+   Progress track:  #ececea
+   Progress fill:   #8a7a68  (muted warm taupe — doesn't compete)
+   Card bg:         #fafafa
+   Card border:     #ececea
+   Card left accent:#D4A855
+   Card title:      #8a7a68  (taupe — reads as a label, not a heading)
+   Tag bg:          #f3f1ee
+   Tag text:        #555
+   Pill bg:         #fafafa
+   Pill text:       #555
+   Pill border:     #e8e5e0
+   Soft pill text:  #8a7a68
+*/
+ 
+.sk-content-panel {
+    flex: 1;
+    min-width: 0;
+    background: #ffffff;
+    padding: 52px 64px 64px;
+    position: relative;
+    overflow: hidden;
+}
+ 
+.sk-content-panel::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: #D4A855;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+ 
+.sk-block {
+    margin-bottom: 56px;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+ 
+.sk-block:last-child {
     margin-bottom: 0;
 }
+ 
+.sk-block + .sk-block {
+    padding-top: 52px;
+    border-top: 1px solid #ececea;
+}
+ 
+/* Section labels — gold, small, uppercase */
+.sk-section-label {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #D4A855;
+    margin: 0 0 6px;
+    padding: 0;
+    text-align: left;
+    display: block;
+}
+ 
+/* Section titles — near-black, light weight, easy to read */
+.sk-section-title {
+    font-size: 36px;
+    font-weight: 300;
+    color: #1C1C1A;
+    margin: 0 0 8px;
+    padding: 0;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+ 
+.sk-rule {
+    width: 32px;
+    height: 1px;
+    background: rgba(212, 168, 85, 0.35);
+    border: none;
+    margin: 0 0 24px;
+    display: block;
+}
+ 
+/* Subsection labels — same gold thread */
+.sk-subsection-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #D4A855;
+    margin: 28px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+}
+ 
+.sk-subsection-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #ececea;
+}
+ 
+/* ── Skills grid ─────────────────────────────────────── */
+.sk-skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 60px;
+    margin-bottom: 8px;
+}
+ 
+@media (max-width: 800px) {
+    .sk-skills-grid { grid-template-columns: 1fr; }
+}
+ 
+.sk-skill-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ececea;
+    text-align: left;
+}
+ 
+.sk-skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+ 
+.sk-skill-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: #1C1C1A;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+ 
+/* Gold on the percentage — the warmth accent in the content panel */
+.sk-skill-pct {
+    font-size: 11px;
+    color: #D4A855;
+    font-weight: 400;
+}
+ 
+/* Progress bars — muted taupe, doesn't compete with gold % or black titles */
+.progress {
+    height: 2px;
+    margin-bottom: 0;
+    border-radius: 1px;
+    background-color: #ececea;
+    box-shadow: none;
+}
+ 
+.progress-bar {
+    background-color: #8a7a68;
+    border-radius: 1px;
+}
+ 
+/* ── Embedded cards ──────────────────────────────────── */
+.emb-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ 
+@media (max-width: 700px) {
+    .emb-grid { grid-template-columns: 1fr; }
+}
+ 
+.emb-card {
+    background: #fafafa;
+    border: 1px solid #ececea;
+    border-left: 2px solid #D4A855;
+    border-radius: 0;
+    padding: 14px 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+                border-left-color 0.2s ease, background 0.2s ease;
+    cursor: default;
+    text-align: left;
+}
+ 
+.emb-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(212, 168, 85, 0.1);
+    border-left-color: #8a7a68;
+    background: #f3f1ee;
+}
+ 
+/* Card title — taupe, reads as a label not a heading, doesn't compete */
+.emb-card-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8a7a68;
+    margin-bottom: 10px;
+    transition: color 0.2s ease;
+}
+ 
+.emb-card:hover .emb-card-title {
+    color: #5a4a38;
+}
+ 
+.emb-tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+ 
+.emb-tag {
+    background: #f3f1ee;
+    color: #555;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 2px;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+ 
+.emb-card:hover .emb-tag {
+    background: #e8e4de;
+    color: #333;
+}
+ 
+/* ── Pills ──────────────────────────────────────────── */
+.pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 0;
+    text-align: left;
+}
+ 
+.sk-pill {
+    background: #fafafa;
+    color: #555;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 16px;
+    border-radius: 0;
+    letter-spacing: 0.03em;
+    border: 1px solid #e8e5e0;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    cursor: default;
+}
+ 
+.sk-pill:hover {
+    background: #f3f1ee;
+    border-color: #D4A855;
+    color: #1C1C1A;
+}
+ 
+.soft-pill {
+    background: transparent;
+    color: #8a7a68;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 16px;
+    border-radius: 0;
+    letter-spacing: 0.03em;
+    border: 1px solid #e8e5e0;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    cursor: default;
+}
+ 
+.soft-pill:hover {
+    background: #D4A855;
+    color: #1C1C1A;
+    border-color: #D4A855;
+}
+ 
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 960px) {
+    .sk-layout { flex-direction: column; }
+ 
+    .sk-nav-panel {
+        flex: none;
+        width: 100%;
+        min-width: unset;
+        padding: 28px 0 20px;
+    }
+ 
+    .sk-nav-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 12px 0 0;
+        gap: 4px;
+    }
+ 
+    .sk-nav-item {
+        width: auto;
+        padding: 5px 14px;
+        border-left: none;
+        border-bottom: 2px solid transparent;
+    }
+ 
+    .sk-nav-item:hover,
+    .sk-nav-item.sk-nav-item-active {
+        border-left-color: transparent;
+        border-bottom-color: #D4A855;
+    }
+ 
+    .sk-content-panel { padding: 36px 28px 40px; }
+}
+ 
+@media (max-width: 600px) {
+    .sk-content-panel { padding: 28px 20px 36px; }
+    .sk-section-title { font-size: 18px; }
+}
+ 
+/* ── Legacy helpers ─────────────────────────────────── */
+.section-skills { padding-bottom: 0; }
+.h-50 { height: 0; }
+.service h4 { margin: 25px 0; font-size: 24px; font-weight: 700; }
+.service p { color: #000; margin-bottom: 0; }
+
 
 
 /* projects section
@@ -1289,25 +1540,21 @@ a.active {
 
 #projects {
     padding: 50px 0;
-    background-size: cover; /* Ensures the background image covers the entire container */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    /* box-shadow: inset 0 1px 2px rgba(0, 27, 27, 0.4);  Inner shadow */
-    overflow: hidden; /* Ensure content does not overflow */
-    /* border: 1px solid #000b0f;*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .portfolio .categories-grid span {
     font-size: 30px;
     margin-bottom: 30px;
     display: inline-block;
-
 }
 
 .portfolio .categories-grid .categories ul li {
     list-style: none;
     margin: 20px 0;
-
 }
 
 .portfolio .categories-grid .categories ul li a {
@@ -1333,7 +1580,6 @@ a.active {
 
 .portfolio_filter {
     padding-left: 0;
-
 }
 
 .portfolio_item {
@@ -1341,7 +1587,7 @@ a.active {
     overflow: hidden;
     display: block;
     margin-bottom: 20px;
-    box-shadow: 0 10px 20px rgba(1, 163, 136, 0);
+    
 }
 
 .portfolio_item .portfolio_item_hover {
@@ -1350,7 +1596,7 @@ a.active {
     left: 0px;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background-color: rgba(0, 0, 0, 0.5);
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
     opacity: 0;
@@ -1385,7 +1631,7 @@ a.active {
 .portfolio_item .portfolio_item_hover .item_info em {
     font-style: normal;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 5px 20px;
     color: #fff;
     margin-top: 10px;
@@ -1428,116 +1674,128 @@ a.active {
     text-align: center;
 }
 
+/* ── Images ── */
 .portfolio_item img {
-    /* -webkit-filter: grayscale(100%);
-        filter: grayscale(100%); */
-    width: 410px;   /* Set the desired width */
-    height: 40vh;  /* Set the desired height */
-    object-fit: cover; /* Ensures the image scales and crops to fill the set dimensions */
-    /* Inner frame */
-    border: 3px solid #b0b0b0; /* Inner frame color (light grey) */
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inset shadow for depth */
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+    /* inner border — warm amber replacing cold grey #b0b0b0 */
+    border: 3px solid #252018;
+    /* outer outline — deep espresso replacing grey #7f7f7f */
+    outline: 5px solid rgba(212, 168, 85, 0.45);
+    border-radius: 1px;
+    /* warm dark inset shadow replacing cold teal inset */
+    box-shadow: inset 0 10px 10px rgba(20, 12, 4, 0.45);
+    display: block;
+    transition: border-color 0.2s ease, outline-color 0.2s ease;
+}
 
-    /* Outer frame (2nd step) */
-    outline: 5px solid #7f7f7f; /* Outer frame color (medium grey) */
+.portfolio_item:hover img {
+    border-color: #1a1208;
+    outline-color: rgba(212, 168, 85, 0.8);
+}
 
-    /* No border-radius for sharp corners */
-    border-radius: 0;
+@media (min-width: 1400px) {
+    .portfolio_item img { height: 300px; }
+}
 
+@media (max-width: 768px) {
+    .portfolio_item img { height: 220px; }
+}
 
-    border-radius: 1px; /* Optional: round the corners */
-    /* Adjust the shadow to make it more prominent */
-    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), /* Larger shadow below *
-                 0 10px 15px rgba(0, 0, 0, 0.2); /* Softer, lighter shadow close to the image */
-
-    perspective: 1000px; /* Adds depth perspective to the box */
-    box-shadow: inset 0 70px 10px rgba(0, 27, 27, 0.4);  /*Inner shadow */
-
+@media (max-width: 480px) {
+    .portfolio_item img { height: 180px; }
 }
 
 .portfolio-padding {
     padding: 10px 0;
-
 }
 
+/* ── Portfolio inner wrapper ── */
 .portfolio-inner {
     padding-bottom: 0 !important;
     padding-top: 10px;
-    border-radius: 10px; /* Optional: round the corners */
-    /* box-shadow: inset 0 7px 10px rgba(0, 27, 27, 0.4);  Inner shadow */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), /* Larger shadow below */
-    0 10px 15px rgba(0, 0, 0, 0.2); /* Softer, lighter shadow close to the image */
-    opacity:1;
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent black overlay */
-    width:115%;
-    left: -7%; /* Move the element 10% to the left */
+    border-radius: 10px;
+    /* warm brown shadow replacing cold black shadow */
+    box-shadow: 0 5px 5px rgba(44, 31, 14, 0.3),
+                0 5px 5px rgba(0, 0, 0, 0.15);
+    opacity: 1;
+    /* warm ivory tint replacing cold white */
+    background-color: rgba(255, 255, 255, 0.08);
+    width: 100%;
     position: relative;
-    border: 1px solid #000b0f;
+    /* amber border replacing cold near-black #000b0f */
+    border: 1px solid rgba(212, 168, 85, 0.35);
 }
 
+/* ── Ensure portfolio columns don't overflow on XL screens ── */
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (min-width: 1200px) {
+    #projects .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: 1600px) {
+    #projects .container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+/* ── Modal ── */
 .modal-content {
     background: #ffffff;
     width: 80%;
     left: 10%;
-    top: 5%; /* Space from the top */
-    margin-bottom: 10%; /* Space from the bottom */
+    top: 5%;
+    margin-bottom: 10%;
     position: relative;
-    padding: 2px; /* Space inside the modal */
-    padding-right: -10px;
-
-    /* Inner frame */
-    border: 5px solid #b0b0b0; /* Inner frame color (light grey) */
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2); /* Inset shadow for depth */
-
-    /* Outer frame (2nd step) */
-    outline: 7px solid #464545; /* Outer frame color (medium grey) */
-
-    /* No border-radius for sharp corners */
+    padding: 2px;
+    /* warm amber inner border replacing grey #b0b0b0 */
+    border: 5px solid rgba(212, 168, 85, 0.5);
+    /* deep brown outer outline replacing grey #464545 */
+    outline: 2px solid #252018;
     border-radius: 0;
-
-    /* Shadow for 3D effect */
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3), /* Outer shadow for depth */
-    inset 0 0 10px rgba(0, 0, 0, 0.4); /* Inset shadow to enhance inner frame */
-
+    box-shadow: 0 5px 5px rgba(44, 31, 14, 0.25),
+                inset 0 0 3px rgba(44, 31, 14, 0.15);
 }
 
 .popup-modal {
-    /*background: #f7f6f6 !important; */
     background-image: url(../img/portfolio/lapbg3.jpg);
-    background-size: cover; /* Ensures the background image covers the entire container */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    /* filter: grayscale(100%);*/
-
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-
-
-/* Close button styling */
 .close-popup-modal1 {
     position: absolute;
-    top: 5px;              /* Distance from the top */
-    right: 10px;            /* Distance from the right side */
-    font-size: 50px;        /* Size of the "X" icon */
-    color: #ffffff;            /* Icon color */
-    background: #ed0606;      /* No background for the button */
-    border: none;           /* No border */
-    cursor: pointer;        /* Pointer cursor on hover */
+    top: 5px;
+    right: 10px;
+    font-size: 50px;
+    color: #ffffff;
+    background: #ed0606;
+    border: none;
+    cursor: pointer;
     z-index: 1000;
-    padding: 5px;
-    padding-right:10px ;
-    padding-left:10px ;         /* Ensure it stays above other elements */
+    padding: 5px 10px;
 }
-/* Hover effect */
+
 .close-popup-modal1:hover {
-    color: #1999f6;         /* Change color when hovered */
+    color: #1999f6;
 }
 
-/* Optional: style the ion icon */
 .close-popup-modal1 i {
-    font-size: 30px;        /* Larger icon size */
+    font-size: 30px;
 }
-
 
 .animatedModal-on {
     opacity: 1;
@@ -1549,30 +1807,30 @@ a.active {
     line-height: 50px;
 }
 
-/* Container to center the button */
 .button-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-    height: 20vh;           /* Full viewport height */
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
 }
 
-/* Button styling */
 .btn-primary {
     padding: 8px 15px;
     font-size: 18px;
-    background-color: #011522;
-    color: white;
+    /* warm espresso replacing cold navy #011522 */
+    background-color: #252018;
+    color: #FDF8F0;
     border: none;
-    border-radius: 5px ;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect */
 .btn-primary:hover {
-    background-color: #2980b9;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* gold on hover */
+    background-color: #D4A855;
+    color: #252018;
+    box-shadow: 0 6px 12px rgba(44, 31, 14, 0.25);
 }
 
 .pdf-container {
