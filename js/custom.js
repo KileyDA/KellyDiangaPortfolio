@@ -5,10 +5,6 @@ $(window).on("load", function () {
   $("#preloader").delay(350).fadeOut("slow");
   $("body").delay(350).css({ overflow: "visible" });
 
-  if ($(".portfolio_container").length) {
-    $(".portfolio_container").isotope("layout");
-  }
-
   if (typeof AOS !== "undefined") {
     AOS.refresh();
   }
@@ -29,7 +25,6 @@ $(document).ready(function () {
   var nav = $(".navbar-fixed-top, footer");
   var navHeight = nav.outerHeight();
 
-  // Active nav on scroll
   $(window).on("scroll", function () {
     var currentScroll = $(this).scrollTop();
 
@@ -53,28 +48,33 @@ $(document).ready(function () {
     }
   });
 
-  // Smooth scroll
   nav.find("a").on("click", function (e) {
     var target = $(this).attr("href");
 
-    if ($(target).length) {
+    if (!target || target === "#" || target.charAt(0) !== "#") return;
+
+    try {
+      var $target = $(target);
+
+      if (!$target.length) return;
+
       e.preventDefault();
 
       $("html, body").animate(
         {
-          scrollTop: $(target).offset().top - navHeight + 2
+          scrollTop: $target.offset().top - navHeight + 2
         },
         600
       );
+    } catch (err) {
+      return;
     }
   });
 
-  // Stellar
   if ($.fn.stellar) {
     $(window).stellar();
   }
 
-  // AOS
   if (typeof AOS !== "undefined") {
     AOS.init({
       duration: 1200,
@@ -83,66 +83,36 @@ $(document).ready(function () {
     });
   }
 
-  // Portfolio isotope setup
-  var $portfolio = $(".portfolio_container");
+  /* Portfolio Filtering Fix */
+  $(".portfolio_filter a").on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
 
-  if ($portfolio.length && $.fn.isotope) {
-    $portfolio.isotope({
-      itemSelector: ".portfolio_container > div",
-      layoutMode: "fitRows",
-      filter: "*"
-    });
+    $(".portfolio_filter a").removeClass("active");
+    $(this).addClass("active");
 
-    $(".portfolio_filter a").on("click", function (e) {
-      e.preventDefault();
+    var filterValue = $(this).attr("data-filter");
+    var items = document.querySelectorAll(".portfolio_container > div");
 
-      $(".portfolio_filter .active").removeClass("active");
-      $(this).addClass("active");
-
-      var filterValue = $(this).attr("data-filter");
-
-      $portfolio.isotope({
-        filter: filterValue,
-        layoutMode: "fitRows"
-      });
-
-      setTimeout(function () {
-        $portfolio.isotope("layout");
-
-        if (typeof AOS !== "undefined") {
-          AOS.refresh();
+    items.forEach(function (item) {
+      if (filterValue === "*") {
+        item.style.setProperty("display", "flex", "important");
+      } else {
+        if (item.matches(filterValue)) {
+          item.style.setProperty("display", "flex", "important");
+        } else {
+          item.style.setProperty("display", "none", "important");
         }
-      }, 300);
-
-      setTimeout(function () {
-        $portfolio.isotope("layout");
-
-        if (typeof AOS !== "undefined") {
-          AOS.refreshHard();
-        }
-      }, 800);
-    });
-
-    // Recalculate when lazy-loaded images finish loading
-    $(".portfolio_container img").on("load", function () {
-      $portfolio.isotope("layout");
-
-      if (typeof AOS !== "undefined") {
-        AOS.refresh();
       }
     });
 
-    // Safety refresh
-    $(window).on("resize", function () {
-      $portfolio.isotope("layout");
+    if (typeof AOS !== "undefined") {
+      setTimeout(function () {
+        AOS.refreshHard();
+      }, 100);
+    }
+  });
 
-      if (typeof AOS !== "undefined") {
-        AOS.refresh();
-      }
-    });
-  }
-
-  // Animated modals
   $(".portfolio_item").each(function () {
     var modalTarget = $(this).data("modal-target");
 
@@ -156,23 +126,13 @@ $(document).ready(function () {
     }
   });
 
-  // Contact form validation
   if ($("#contact-form").length && $.fn.validate) {
     $("#contact-form").validate({
       rules: {
-        name: {
-          required: true,
-          minlength: 2
-        },
-        email: {
-          required: true
-        },
-        phone: {
-          required: false
-        },
-        message: {
-          required: true
-        }
+        name: { required: true, minlength: 2 },
+        email: { required: true },
+        phone: { required: false },
+        message: { required: true }
       },
 
       messages: {
@@ -180,12 +140,8 @@ $(document).ready(function () {
           required: "This field is required",
           minlength: "your name must consist of at least 2 characters"
         },
-        email: {
-          required: "This field is required"
-        },
-        message: {
-          required: "This field is required"
-        }
+        email: { required: "This field is required" },
+        message: { required: "This field is required" }
       },
 
       submitHandler: function (form) {
