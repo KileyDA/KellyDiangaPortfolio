@@ -400,3 +400,321 @@ video{width:100%;height:450px;object-fit:cover;border:1px solid var(--border-gla
   #contact .col-md-4,#contact .col-md-8{max-width:100%;width:100%}
   .my-info,.contact-bg{padding:28px}
 }
+
+/* ---------- Compact About + Contact Combined Section ---------- */
+#about{
+  padding:96px 0 90px;
+  background:radial-gradient(circle at top left,rgba(34,211,238,.12),transparent 32%),linear-gradient(135deg,var(--bg-deep),var(--bg-main) 48%,var(--bg-panel));
+}
+#about .about-inner{
+  width:min(var(--container),calc(100% - 48px));
+  max-width:var(--container);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(340px,430px);
+  gap:34px;
+  align-items:start;
+  min-height:auto;
+  padding:52px;
+  border:1px solid var(--border-glass);
+  border-radius:var(--radius-lg);
+  background:linear-gradient(145deg,rgba(15,23,42,.92),rgba(2,6,23,.92));
+  box-shadow:var(--shadow-strong);
+  overflow:hidden;
+}
+#about .about-inner:before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-blue),var(--accent-warm));
+}
+#about .about-text-panel{
+  flex:initial;
+  width:100%;
+  padding:0;
+  background:transparent;
+  display:block;
+  overflow:visible;
+}
+#about .about-text-panel:before,
+#about .about-text-panel:after{
+  display:none;
+}
+#about .about-heading{
+  font-size:clamp(36px,4vw,52px);
+  margin-bottom:16px;
+}
+#about .about-rule{
+  margin-bottom:22px;
+}
+#about .about-body p{
+  font-size:14.5px;
+  line-height:1.7;
+  margin-bottom:12px;
+}
+.about-chips-inline{
+  margin-top:20px;
+  max-width:620px;
+}
+.about-chips-inline .about-chip{
+  padding:10px 8px;
+}
+.about-chips-inline .about-chip-num{
+  font-size:22px;
+}
+.about-contact-panel{
+  position:relative;
+  scroll-margin-top:100px;
+}
+.about-contact-card{
+  background:rgba(15,23,42,.76);
+  border:1px solid var(--border-glass);
+  border-radius:24px;
+  padding:26px;
+  backdrop-filter:blur(18px);
+  box-shadow:var(--shadow-soft);
+}
+.about-contact-header{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:18px;
+}
+.about-contact-avatar{
+  width:68px;
+  height:68px;
+  border-radius:18px;
+  object-fit:cover;
+  object-position:top center;
+  border:1px solid rgba(34,211,238,.28);
+}
+.about-contact-label{
+  margin:0 0 4px;
+  color:var(--accent);
+  font-size:11px;
+  font-weight:850;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.about-contact-header h2{
+  margin:0;
+  font-size:26px;
+  line-height:1.1;
+  color:var(--text-main);
+}
+.about-contact-details{
+  display:grid;
+  gap:10px;
+  margin-bottom:18px;
+}
+.about-contact-link{
+  display:block;
+  padding:12px 14px;
+  border-radius:14px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  transition:.22s ease;
+}
+.about-contact-link:hover{
+  transform:translateY(-2px);
+  border-color:rgba(34,211,238,.40);
+  background:rgba(34,211,238,.08);
+}
+.about-contact-link span{
+  display:block;
+  margin-bottom:3px;
+  color:var(--accent);
+  font-size:10px;
+  font-weight:850;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.about-contact-link strong{
+  display:block;
+  color:var(--text-main);
+  font-size:14px;
+  font-weight:650;
+  word-break:break-word;
+}
+.about-contact-form .form-group{
+  margin-bottom:10px!important;
+}
+.form-row-compact{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+#about .about-contact-form input,
+#about .about-contact-form textarea,
+#about .about-contact-form .form-control{
+  width:100%;
+  min-height:46px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:12px;
+  padding:12px 14px;
+  color:var(--text-main);
+  font-size:14px;
+  box-shadow:none;
+}
+#about .about-contact-form textarea.form-control{
+  min-height:96px;
+  resize:vertical;
+}
+#about .about-contact-form input:focus,
+#about .about-contact-form textarea:focus{
+  outline:0;
+  border-color:var(--accent);
+  box-shadow:0 0 0 4px rgba(34,211,238,.10);
+}
+#about .contact-compact-submit{
+  width:100%;
+  min-height:46px;
+  margin-top:2px;
+  margin-bottom:0;
+}
+
+@media(max-width:1100px){
+  #about .about-inner{
+    grid-template-columns:1fr;
+    padding:42px;
+  }
+  .about-contact-panel{
+    width:100%;
+  }
+}
+@media(max-width:720px){
+  #about{
+    padding:78px 0 70px;
+  }
+  #about .about-inner{
+    width:min(100% - 28px,var(--container));
+    padding:30px 22px;
+    gap:28px;
+  }
+  #about .about-heading{
+    font-size:38px;
+  }
+  .about-chips-inline,
+  .form-row-compact{
+    grid-template-columns:1fr;
+  }
+  .about-chips-inline{
+    flex-direction:column;
+  }
+  .about-contact-card{
+    padding:22px;
+  }
+}
+
+/* ---------- Project card with Learn More + GitHub links ---------- */
+
+.project-card-with-links {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    background: linear-gradient(180deg,rgba(15,23,42,.96),rgba(11,17,32,.98));
+    border: 1px solid rgba(148,163,184,.15);
+    box-shadow: 0 16px 50px rgba(0,0,0,.22);
+    transition: transform .26s ease, border-color .26s ease, box-shadow .26s ease;
+}
+
+.project-card-with-links:hover {
+    transform: translateY(-8px);
+    border-color: rgba(34,211,238,.45);
+    box-shadow: 0 28px 70px rgba(34,211,238,.12);
+}
+
+/* The clickable main card area */
+.project-card-with-links .portfolio-card-main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    width: 100%;
+    margin: 0;
+    overflow: visible !important;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: inherit;
+}
+
+/* Stop the inner link from moving separately */
+.project-card-with-links .portfolio-card-main:hover {
+    transform: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+/* Keep the top-right arrow */
+.project-card-with-links .portfolio-card-main:after {
+    content: "↗";
+    position: absolute;
+    right: 24px;
+    top: 236px !important;
+    z-index: 5;
+    color: var(--text-main);
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 700;
+    opacity: .85;
+    transition: .24s ease;
+}
+
+.project-card-with-links:hover .portfolio-card-main:after {
+    transform: translate(3px,-3px);
+    color: var(--accent);
+    opacity: 1;
+}
+
+/* Hide the old automatic Learn More text only for this card */
+.project-card-with-links .portfolio_item_hover:after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Real action links at the bottom */
+.portfolio-card-actions {
+    display: flex !important;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    padding: 12px 24px 16px;
+    border-top: 1px solid rgba(148,163,184,.16);
+    background: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+.portfolio-action-link {
+    display: inline-flex !important;
+    align-items: center;
+    width: auto !important;
+    max-width: none !important;
+    color: rgba(96,165,250,.90);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    line-height: 1.4;
+    transition: .22s ease;
+}
+
+.portfolio-action-link:hover {
+    color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.github-link {
+    color: rgba(203,213,225,.85);
+}
