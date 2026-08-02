@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">ARIA human-centred driver alertness companion</title>
+  <desc id="desc">Dark automotive interface illustration with a road, driver-monitoring signals, haptic feedback and a glowing ARIA companion ring.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#060a10"/>
+      <stop offset="0.55" stop-color="#0b1722"/>
+      <stop offset="1" stop-color="#101923"/>
+    </linearGradient>
+    <radialGradient id="ringGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#4fa8f5" stop-opacity="0.55"/>
+      <stop offset="0.55" stop-color="#4fa8f5" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#4fa8f5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#27323b"/>
+      <stop offset="1" stop-color="#080b0f"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="895" cy="225" r="180" fill="url(#ringGlow)"/>
+
+  <g opacity="0.7">
+    <rect x="70" y="70" width="1060" height="660" rx="34" fill="none" stroke="#2a3945" stroke-width="2"/>
+    <path d="M80 525 C310 430 420 460 600 505 C790 552 965 495 1120 435 L1120 730 L80 730 Z" fill="url(#road)"/>
+    <path d="M600 486 L530 730" stroke="#f3f5f7" stroke-width="7" stroke-dasharray="36 34" opacity="0.8"/>
+    <path d="M685 502 L760 730" stroke="#f3f5f7" stroke-width="7" stroke-dasharray="36 34" opacity="0.8"/>
+    <path d="M415 472 L250 730" stroke="#788894" stroke-width="3" opacity="0.45"/>
+    <path d="M870 486 L1065 730" stroke="#788894" stroke-width="3" opacity="0.45"/>
+  </g>
+
+  <g transform="translate(870 222)">
+    <circle r="102" fill="#081019" stroke="#4fa8f5" stroke-width="8" filter="url(#softGlow)"/>
+    <circle r="75" fill="none" stroke="#3fe0a8" stroke-width="4" stroke-dasharray="18 13" opacity="0.82"/>
+    <circle r="20" fill="#4fa8f5"/>
+    <path d="M-42 20 Q0 52 42 20" fill="none" stroke="#dcecff" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="-32" cy="-18" r="7" fill="#dcecff"/>
+    <circle cx="32" cy="-18" r="7" fill="#dcecff"/>
+  </g>
+
+  <g transform="translate(118 120)">
+    <text x="0" y="0" fill="#ffa62b" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="5">AUTOMOTIVE EMBEDDED SYSTEM</text>
+    <text x="0" y="92" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="102" font-weight="800">ARIA</text>
+    <text x="0" y="146" fill="#d6e0e8" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="600">Human-Centred Driver Alertness Companion</text>
+    <text x="0" y="205" fill="#90a1ae" font-family="Arial, Helvetica, sans-serif" font-size="23">The space before the alarm — and after it.</text>
+  </g>
+
+  <g transform="translate(120 386)" font-family="Arial, Helvetica, sans-serif">
+    <g>
+      <rect width="250" height="86" rx="18" fill="#111d27" stroke="#334857"/>
+      <circle cx="42" cy="43" r="12" fill="#ffa62b"/>
+      <text x="70" y="37" fill="#ffffff" font-size="21" font-weight="700">Context-aware</text>
+      <text x="70" y="62" fill="#8fa3b2" font-size="16">Safety-gated interaction</text>
+    </g>
+    <g transform="translate(275 0)">
+      <rect width="250" height="86" rx="18" fill="#111d27" stroke="#334857"/>
+      <path d="M35 55 C45 35 55 75 65 43 C75 18 85 72 98 31" fill="none" stroke="#3fe0a8" stroke-width="5" stroke-linecap="round"/>
+      <text x="112" y="37" fill="#ffffff" font-size="21" font-weight="700">Haptic feedback</text>
+      <text x="112" y="62" fill="#8fa3b2" font-size="16">Seat-based attention cue</text>
+    </g>
+  </g>
+
+  <g transform="translate(120 616)" font-family="Arial, Helvetica, sans-serif">
+    <rect width="420" height="72" rx="36" fill="#0d1821" stroke="#4fa8f5" stroke-width="2"/>
+    <circle cx="42" cy="36" r="13" fill="#4fa8f5"/>
+    <text x="72" y="45" fill="#dbe8f2" font-size="21" font-weight="700">Interactive system demonstration</text>
+  </g>
+
+  <g transform="translate(830 635)" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text fill="#7f929f" font-size="16" letter-spacing="2">BY KELLY DIANGA</text>
+  </g>
+</svg>
