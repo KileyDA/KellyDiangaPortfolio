@@ -64,121 +64,252 @@
     </div>
     
 
-    <!-- projects -->
-    <div class="section" id="projects">
-        <div class="container">
-            <div class="col-md-12">
-                <h4>02 — Featured Work</h4>
-                <h1 class="size-50">Engineering Projects</h1>
-            </div>
-            <!-- main container -->
-            <div class="main-container portfolio-inner clearfix">
-                <!-- portfolio div -->
-                <div class="portfolio-div">
-                    <div class="portfolio">
-                        <!-- portfolio_filter -->
-                        <div class="categories-grid wow fadeInLeft">
-                            <nav class="categories">
-                                <ul class="portfolio_filter">
-                                    <li><a href="#" class="active" data-filter="*">All</a></li>
-                                    <li><a href="#" data-filter=".embedded">Embedded Systems</a></li>
-                                    <li><a href="#" data-filter=".robotics">Robotics</a></li>
-                                    <li><a href="#" data-filter=".programming">Software Projects</a></li>
-                                    <li><a href="#" data-filter=".software">Design & Simulation</a></li>
-                                    <li><a href="#" data-filter=".initiatives">Initiatives</a></li>
-                                    <li><a href="#" data-filter=".hobbies">Hobbies</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <!-- portfolio_filter -->
-                        <!-- portfolio_container -->
-                        <div class="no-padding portfolio_container clearfix" data-aos="fade-up">
+<!-- projects -->
+<div class="section" id="projects">
+    <div class="container">
+        <div class="col-md-12">
+            <h4>02 &mdash; Featured Work</h4>
+            <h1 class="size-50">Selected Projects &amp; Initiatives</h1>
+        </div>
 
-                             <!-- ===================Embedded Systems========== -->
+        <div class="main-container portfolio-inner clearfix">
+            <div class="portfolio-div">
+                <div class="portfolio">
+                    <!-- FILTER NAVIGATION -->
+                    <div class="categories-grid wow fadeInLeft">
+                        <nav class="categories">
+                            <ul class="portfolio_filter">
+                                <li>
+                                    <a class="active" data-filter="*" href="#">All</a>
+                                </li>
+                                <li>
+                                    <a data-filter=".analytics" href="#">Business &amp; Product</a>
+                                </li>
+                                <li>
+                                    <a data-filter=".embedded" href="#">Embedded Systems</a>
+                                </li>
+                                <li>
+                                    <a data-filter=".robotics" href="#">Robotics</a>
+                                </li>
+                                <li>
+                                    <a data-filter=".programming" href="#">Software Projects</a>
+                                </li>
+                                <li>
+                                    <a data-filter=".software" href="#">Design &amp; Simulation</a>
+                                </li>
+                                <li>
+                                    <a data-filter=".initiatives" href="#">Initiatives</a>
+                                </li>
+                                <li>
+                                    <a data-filter=".hobbies" href="#">Hobbies</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
 
-                        <!--
-                        ARIA PROJECT CARD TEMPORARILY HIDDEN UNTIL IP FILING
+                    <!-- PROJECT CARDS: order is intentional; keep categories on the card wrapper. -->
+                    <div class="no-padding portfolio_container clearfix" data-aos="fade-up">
 
-                        <div class="col-md-4 col-sm-6 embedded programming">
+                        <!-- PRIORITY PROJECTS: client delivery, product thinking and technical execution -->
+
+                        <!-- 01. Darogan — Cost of Living Calculator -->
+                        <div class="col-md-4 col-sm-6 programming analytics">
                             <div class="project-card-with-links">
-
-                                <a id="demo29"
-                                href="#animatedModal29"
-                                class="portfolio_item portfolio-card-main"
-                                data-modal-target="animatedModal29">
-
-                                    <img src="img/portfolio/aria-driver-companion.svg"
+                                <a
+                                    class="portfolio_item portfolio-card-main"
+                                    data-modal-target="animatedModal30"
+                                    href="#animatedModal30"
+                                    id="demo30">
+                                    <img
+                                        alt="Darogan Cost of Living Calculator with UK location, salary and transport comparison inputs"
+                                        class="img-responsive"
                                         loading="lazy"
-                                        alt="ARIA human-centred driver alertness companion interactive demonstration"
-                                        class="img-responsive" />
-
+                                        src="img/portfolio/darogan-calculator.png" />
                                     <div class="portfolio_item_hover">
                                         <div class="portfolio-border clearfix">
                                             <div class="item_info">
-                                                <span>ARIA: Human-Centred Driver Alertness Companion</span>
-
-                                                <p>Embedded automotive companion concept and prototype in development, designed to work alongside existing driver-monitoring systems through context-aware software, haptic seat feedback, and short voice interactions.</p>
-
+                                                <span>Darogan — Cost of Living Calculator</span>
+                                                <p>
+                                                    Client-delivered decision-support platform helping users
+                                                    compare UK living costs, salary deductions and estimated
+                                                    disposable income. My work focused on frontend workflows,
+                                                    API integration, testing, translating client feedback into functional requirements and project management.
+                                                </p>
                                                 <div class="portfolio-tech-tags">
-                                                    <span>Embedded Systems</span>
-                                                    <span>Automotive Systems</span>
-                                                    <span>Raspberry Pi</span>
-                                                    <span>Embedded Linux</span>
-                                                    <span>Python</span>
-                                                    <span>Driver Monitoring Integration</span>
-                                                    <span>Haptic Feedback</span>
-                                                    <span>Voice Interaction</span>
-                                                    <span>Human–Machine Interaction</span>
-                                                    <span>System Architecture</span>
-                                                    <span>Hardware–Software Integration</span>
-                                                    <span>Prototype Development</span>
+                                                    <span>Client Project</span>
+                                                    <span>Requirements &amp; User Stories</span>
+                                                    <span>React</span>
+                                                    <span>JavaScript</span>
+                                                    <span>API Integration</span>
+                                                    <span>Data Visualisation</span>
+                                                    <span>Responsive UI</span>
+                                                    <span>Testing</span>
+                                                    <span>Team Delivery</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
-
                                 <div class="portfolio-card-actions">
-                                    <a href="#animatedModal29"
-                                    class="portfolio-action-link"
-                                    onclick="document.getElementById('demo29').click(); return false;">
-                                        Learn More ↗
-                                    </a>
-
-                                    <a href="projects/aria/ARIA_Driver_Companion_Interactive_Demo_Kelly_Dianga.html"
-                                    class="portfolio-action-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer">
-                                        Launch Interactive Demo ↗
+                                    <a
+                                        class="portfolio-action-link"
+                                        href="#animatedModal30"
+                                        onclick="document.getElementById('demo30').click(); return false;">
+                                        Explore Case Study ↗
                                     </a>
                                 </div>
-
                             </div>
                         </div>
 
-                        END HIDDEN ARIA PROJECT CARD
-                        -->
-                          <!-- single work -->
+                        <!-- 02. SPOLVE Game Prototype -->
+                        <div class="col-md-4 col-sm-6 programming analytics">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal27"
+                                href="#animatedModal27"
+                                id="demo27">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/spolve.jpeg" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>SPOLVE Game Prototype</span>
+                                            <p>
+                                                Medium-fidelity speech therapy game prototype designed for dual
+                                                users: children with Childhood Apraxia of Speech and
+                                                Speech-Language Pathologists (SLPs). Combines speech-based
+                                                gameplay, personalised lessons, and clinician performance
+                                                tracking to support home practice.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>Android App Development</span>
+                                                <span>Speech Recognition</span>
+                                                <span>Mobile UI/UX Design</span>
+                                                <span>Game-Based Learning</span>
+                                                <span>Accessibility Design</span>
+                                                <span>User Research</span>
+                                                <span>Usability Testing</span>
+                                                <span>Rapid Prototyping</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 03. Food Catering Website -->
+                        <div class="col-md-4 col-sm-6 programming analytics">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal06"
+                                href="#animatedModal06"
+                                id="demo06">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/foodcatering1.png" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Food Catering Website</span>
+                                            <p>
+                                                Web application developed for FoodEdge Gourmet Catering to
+                                                manage catering services, customer profiles, bookings, payments,
+                                                and business analytics through a responsive and secure platform
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>Laravel</span>
+                                                <span>PHP</span>
+                                                <span>MySQL</span>
+                                                <span>Web Development</span>
+                                                <span>Team Collaboration</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 04. CI/CD DevOps Pipeline -->
+                        <div class="col-md-4 col-sm-6 programming">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal26"
+                                href="#animatedModal26"
+                                id="demo26">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/devops.png" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>CI/CD DevOps Pipeline</span>
+                                            <p>
+                                                Developed using Jenkins, Docker, GitLab, Terraform to automate
+                                                building, testing, security analysis, containerisation, and
+                                                deployment of a Spring Boot application across two Azure DTL
+                                                virtual machines. Features automated rollback, reverse proxy
+                                                routing, infrastructure-as-code provisioning, and multi-level
+                                                automated testing.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>DevOps</span>
+                                                <span>Jenkins</span>
+                                                <span>Docker</span>
+                                                <span>GitLab</span>
+                                                <span>Debian 13</span>
+                                                <span>Terraform</span>
+                                                <span>SonarCloud</span>
+                                                <span>Spring Boot</span>
+                                                <span>Gradle</span>
+                                                <span>Selenium</span>
+                                                <span>JUnit 5</span>
+                                                <span>JaCoCo</span>
+                                                <span>CheckStyle</span>
+                                                <span>SpotBugs</span>
+                                                <span>Trivy</span>
+                                                <span>Hadolint</span>
+                                                <span>Nginx</span>
+                                                <span>Azure DTL</span>
+                                                <span>MariaDB</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 05. STM32 Smart Depot Safety & Access Monitoring System -->
                         <div class="col-md-4 col-sm-6 embedded">
                             <div class="project-card-with-links">
-
-                                <a id="demo28"
-                                href="#animatedModal28"
-                                class="portfolio_item portfolio-card-main"
-                                data-modal-target="animatedModal28">
-
-                                    <img src="img/portfolio/smartdepotmonitoringsystem.jpeg"
-                                        loading="lazy"
+                                <a
+                                    class="portfolio_item portfolio-card-main"
+                                    data-modal-target="animatedModal28"
+                                    href="#animatedModal28"
+                                    id="demo28">
+                                    <img
                                         alt="STM32 Smart Depot Safety and Access Monitoring System"
-                                        class="img-responsive" />
-
+                                        class="img-responsive"
+                                        loading="lazy"
+                                        src="img/portfolio/smartdepotmonitoringsystem.jpeg" />
                                     <div class="portfolio_item_hover">
                                         <div class="portfolio-border clearfix">
                                             <div class="item_info">
-                                                <span>STM32 Smart Depot Safety &amp; Access Monitoring System</span>
-
-                                                <p>Embedded safety monitoring system developed using an STM32 Nucleo-F446RE to detect day/night conditions, monitor motion in restricted areas, and trigger visual and audio alerts using LDR, PIR, LED, buzzer, and button circuits.</p>
-
+                                                <span>
+                                                    STM32 Smart Depot Safety &amp; Access Monitoring System
+                                                </span>
+                                                <p>
+                                                    Embedded safety monitoring system developed using an STM32
+                                                    Nucleo-F446RE to detect day/night conditions, monitor motion
+                                                    in restricted areas, and trigger visual and audio alerts
+                                                    using LDR, PIR, LED, buzzer, and button circuits.
+                                                </p>
                                                 <div class="portfolio-tech-tags">
                                                     <span>STM32 Nucleo-F446RE</span>
                                                     <span>Embedded C</span>
@@ -197,456 +328,868 @@
                                         </div>
                                     </div>
                                 </a>
-
-                               <div class="portfolio-card-actions">
-                                <a href="#animatedModal28"
-                                class="portfolio-action-link"
-                                onclick="document.getElementById('demo28').click(); return false;">
-                                    Learn More ↗
-                                </a>
-
-                                <a href="https://github.com/KileyDA/stm32-smart-depot-safety-monitoring"
-                                class="portfolio-action-link github-link"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                    GitHub ↗
-                                </a>
-                            </div>
-
+                                <div class="portfolio-card-actions">
+                                    <a
+                                        class="portfolio-action-link"
+                                        href="#animatedModal28"
+                                        onclick="document.getElementById('demo28').click(); return false;">
+                                        Learn More ↗
+                                    </a>
+                                    <a
+                                        class="portfolio-action-link github-link"
+                                        href="https://github.com/KileyDA/stm32-smart-depot-safety-monitoring"
+                                        rel="noopener noreferrer"
+                                        target="_blank">
+                                        GitHub ↗
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <!-- end single work -->
 
-                             <!-- single work -->
-                            <div class="col-md-4 col-sm-6 embedded">
-                                <a id="demo22" href="#animatedModal25" class="portfolio_item" data-modal-target="animatedModal25">
-                                    <img src="img/portfolio/vhdl1.png" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>VHDL Traffic Light Control System</span>
-                                                <p>A system developed in VHDL using finite state machines, synchronized inputs, and timer-based state transitions to manage vehicle and pedestrian traffic flow. Includes simulation, testbench validation, and traffic priority handling.</p>
-                                                <div class="portfolio-tech-tags"><span>VHDL</span><span>Xilinx ISE</span><span>CoolRunner2 CPLD</span><span>Finite State Machine</span><span>Synchronous Logic</span><span>Testbench Simulation</span></div>
+                        <!-- 06. Human Following Robot to Assist the Elderly -->
+                        <div class="col-md-4 col-sm-6 robotics">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal01"
+                                href="#animatedModal01"
+                                id="demo01">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/humanfollowingrobot1.jpg" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Human Following Robot to Assist the Elderly</span>
+                                            <p>
+                                                AI-powered human-following robot designed to assist elderly
+                                                individuals by carrying belongings and autonomously tracking a
+                                                target person using computer vision, TensorFlow Lite, and
+                                                OpenCV-based marker detection.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>SOLIDWORKS</span>
+                                                <span>Python3</span>
+                                                <span>C++</span>
+                                                <span>IoT</span>
+                                                <span>Artificial Intelligence</span>
+                                                <span>Computer Vision</span>
+                                                <span>OpenCV</span>
+                                                <span>Raspberry Pi 4</span>
+                                                <span>ESP32</span>
+                                                <span>UART Communication</span>
+                                                <span>L298N Motor Driver</span>
+                                                <span>TensorFlow Lite</span>
                                             </div>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
-                             
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 embedded">
-                                <a id="demo21" href="#animatedModal21" class="portfolio_item" data-modal-target="animatedModal21">
-                                    <img src="img/portfolio/embeddedSecuritySystem.png" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Security and Alarm Light System</span>
-                                                <p>Microcontroller-based home security lighting system using LUX and PIR sensors for automatic night lighting, motion-triggered alerts, and basic alarm control.</p>
-                                                <div class="portfolio-tech-tags"><span>Embedded C </span><span>ADC interfacing</span><span>GPIO configuration</span><span>sensor integration (LUX &amp; PIR)</span><span>hysteresis-based control logic</span></div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 07. Vet Clinic Appointment System -->
+                        <div class="col-md-4 col-sm-6 programming analytics">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal19"
+                                href="#animatedModal19"
+                                id="demo19">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/vetclinic1.png" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Vet Clinic Appointment System</span>
+                                            <p>
+                                                Java-based veterinary clinic management system designed to
+                                                handle appointment scheduling, pet and owner records, and
+                                                veterinary staff management through a modular package structure
+                                                and automated entity relationships.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>Java</span>
+                                                <span>Object-Oriented Programming</span>
+                                                <span>CRUD Operations</span>
+                                                <span>Console-Based UI</span>
                                             </div>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
+                                </div>
+                            </a>
+                        </div>
 
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 embedded">
-                                <a id="demo22" href="#animatedModal22" class="portfolio_item" data-modal-target="animatedModal22">
-                                    <img src="img/portfolio/embeddedWaterControlSystem.png" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Water Level Control System</span>
-                                                <p> </p>
-                                                <p>Automatic control system using ultrasonic sensors and a microcontroller to monitor tank levels and automatically control a water pump based on high and low water thresholds.</p>
-                                                <div class="portfolio-tech-tags"><span>Embedded C </span><span>ARM Microcontroller</span><span>FTM timer</span><span>ISR control</span><span>ultrasonic sensors</span><span>LCD/Termite display</span></div>
+                        <!-- 08. Beauty Salon Website -->
+                        <div class="col-md-4 col-sm-6 programming">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal05"
+                                href="#animatedModal05"
+                                id="demo05">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/beautysalon1.png" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Beauty Salon Website</span>
+                                            <p>
+                                                Responsive beauty salon website developed for Oracle Beauty
+                                                Parlor to showcase services, manage customer inquiries and
+                                                appointments, and provide business information through an
+                                                interactive and user-friendly platform.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>HTML</span>
+                                                <span>CSS</span>
+                                                <span>MySQL</span>
+                                                <span>UI/UX Design</span>
                                             </div>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
+                                </div>
+                            </a>
+                        </div>
 
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 embedded">
-                                <a id="demo22" href="#animatedModal23" class="portfolio_item" data-modal-target="animatedModal23">
-                                    <img src="img/portfolio/embeddedElectronicMusicBox.png" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Electronic Music Box</span>
-                                                <p></p>
-                                                <p>Electronic music box developed using SysTick and PIT timers to generate tones, play melodies, and synchronise song lyrics through a microcontroller-controlled beeper system.</p>
-                                                <div class="portfolio-tech-tags"><span>Embedded C </span><span>ARM Microcontroller</span><span>SysTick timer</span><span>PIT Module</span><span>interrupts</span><span>GPIO control</span><span>Beeper Output</span></div>
+                        <!-- ADDITIONAL ENGINEERING, ROBOTICS AND SOFTWARE PROJECTS -->
+
+                        <!-- 09. VHDL Traffic Light Control System -->
+                        <div class="col-md-4 col-sm-6 embedded">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal25"
+                                href="#animatedModal25"
+                                id="demo25">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/vhdl1.png" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>VHDL Traffic Light Control System</span>
+                                            <p>
+                                                A system developed in VHDL using finite state machines,
+                                                synchronized inputs, and timer-based state transitions to manage
+                                                vehicle and pedestrian traffic flow. Includes simulation,
+                                                testbench validation, and traffic priority handling.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>VHDL</span>
+                                                <span>Xilinx ISE</span>
+                                                <span>CoolRunner2 CPLD</span>
+                                                <span>Finite State Machine</span>
+                                                <span>Synchronous Logic</span>
+                                                <span>Testbench Simulation</span>
                                             </div>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
+                                </div>
+                            </a>
+                        </div>
 
-                             <!-- single work -->
-                            <div class="col-md-4 col-sm-6 embedded">
-                                <a id="demo22" href="#animatedModal24" class="portfolio_item" data-modal-target="animatedModal24">
-                                    <img src="img/portfolio/embeddedAssembyLanguageAndADC.png" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Assembly Language & ADC System</span>
-                                                <p>Assembly language and ADC integration project using a microcontroller to convert analogue input values into decimal and hexadecimal outputs on a 7-segment display through ADC scaling and assembly-level display control.</p>
-                                                <div class="portfolio-tech-tags"><span>ARM assembly</span><span>embedded C</span><span>ADC configuration and scaling</span><span>GPIO bit manipulation</span><span>seven-segment display control</span></div>
+                        <!-- 10. Security and Alarm Light System -->
+                        <div class="col-md-4 col-sm-6 embedded">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal21"
+                                href="#animatedModal21"
+                                id="demo21">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/embeddedSecuritySystem.png" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Security and Alarm Light System</span>
+                                            <p>
+                                                Microcontroller-based home security lighting system using LUX
+                                                and PIR sensors for automatic night lighting, motion-triggered
+                                                alerts, and basic alarm control.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>Embedded C</span>
+                                                <span>ADC interfacing</span>
+                                                <span>GPIO configuration</span>
+                                                <span>sensor integration (LUX &amp; PIR)</span>
+                                                <span>hysteresis-based control logic</span>
                                             </div>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
+                                </div>
+                            </a>
+                        </div>
 
-                            <!-- ===================Robotics========== -->
-
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 robotics">
-                                <a id="demo01" href="#animatedModal01" class="portfolio_item" data-modal-target="animatedModal01">
-                                    <img src="img/portfolio/humanfollowingrobot1.jpg" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Human Following Robot to Assist the Elderly</span>
-                                                <p>AI-powered human-following robot designed to assist elderly individuals by carrying belongings and autonomously tracking a target person using computer vision, TensorFlow Lite, and OpenCV-based marker detection.</p>
-                                                <div class="portfolio-tech-tags"><span>SOLIDWORKS</span><span>Python3</span><span>C++</span><span>IoT</span><span>Artificial Intelligence</span><span>Computer Vision</span><span>OpenCV</span><span>Raspberry Pi 4</span><span>ESP32</span><span>UART Communication</span><span>L298N Motor Driver</span><span>TensorFlow Lite</span></div>
+                        <!-- 11. Water Level Control System -->
+                        <div class="col-md-4 col-sm-6 embedded">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal22"
+                                href="#animatedModal22"
+                                id="demo22">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/embeddedWaterControlSystem.png" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Water Level Control System</span>
+                                            <p></p>
+                                            <p>
+                                                Automatic control system using ultrasonic sensors and a
+                                                microcontroller to monitor tank levels and automatically control
+                                                a water pump based on high and low water thresholds.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>Embedded C</span>
+                                                <span>ARM Microcontroller</span>
+                                                <span>FTM timer</span>
+                                                <span>ISR control</span>
+                                                <span>ultrasonic sensors</span>
+                                                <span>LCD/Termite display</span>
                                             </div>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
+                                </div>
+                            </a>
+                        </div>
 
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 robotics">
-                                <a id="demo02" href="#animatedModal02" class="portfolio_item" data-modal-target="animatedModal02">
-                                    <img src="img/portfolio/landminerobot1.jpg" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Landmine Clearing Robot</span>
-                                                <p></p>
-                                                <p>Autonomous robot developed to detect, navigate toward, and transport landmines to a designated collection area using sensor-based detection and robotic control systems.</p>
-                                                <div class="portfolio-tech-tags"><span>MATLAB</span><span>NI DAQ Device</span><span>Sensor Systems</span><span>Autonomous Navigation</span></div>
+                        <!-- 12. Electronic Music Box -->
+                        <div class="col-md-4 col-sm-6 embedded">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal23"
+                                href="#animatedModal23"
+                                id="demo23">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/embeddedElectronicMusicBox.png" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Electronic Music Box</span>
+                                            <p></p>
+                                            <p>
+                                                Electronic music box developed using SysTick and PIT timers to
+                                                generate tones, play melodies, and synchronise song lyrics
+                                                through a microcontroller-controlled beeper system.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>Embedded C</span>
+                                                <span>ARM Microcontroller</span>
+                                                <span>SysTick timer</span>
+                                                <span>PIT Module</span>
+                                                <span>interrupts</span>
+                                                <span>GPIO control</span>
+                                                <span>Beeper Output</span>
                                             </div>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
+                                </div>
+                            </a>
+                        </div>
 
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 robotics">
-                                <a id="demo03" href="#animatedModal03" class="portfolio_item" data-modal-target="animatedModal03">
-                                    <img src="img/portfolio/plcprogramming1.jpg" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
+                        <!-- 13. Assembly Language & ADC System -->
+                        <div class="col-md-4 col-sm-6 embedded">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal24"
+                                href="#animatedModal24"
+                                id="demo24">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/embeddedAssembyLanguageAndADC.png" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Assembly Language &amp; ADC System</span>
+                                            <p>
+                                                Assembly language and ADC integration project using a
+                                                microcontroller to convert analogue input values into decimal
+                                                and hexadecimal outputs on a 7-segment display through ADC
+                                                scaling and assembly-level display control.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>ARM assembly</span>
+                                                <span>embedded C</span>
+                                                <span>ADC configuration and scaling</span>
+                                                <span>GPIO bit manipulation</span>
+                                                <span>seven-segment display control</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 14. Landmine Clearing Robot -->
+                        <div class="col-md-4 col-sm-6 robotics">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal02"
+                                href="#animatedModal02"
+                                id="demo02">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/landminerobot1.jpg" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Landmine Clearing Robot</span>
+                                            <p></p>
+                                            <p>
+                                                Autonomous robot developed to detect, navigate toward, and
+                                                transport landmines to a designated collection area using
+                                                sensor-based detection and robotic control systems.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>MATLAB</span>
+                                                <span>NI DAQ Device</span>
+                                                <span>Sensor Systems</span>
+                                                <span>Autonomous Navigation</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 15. PLC Programming -->
+                        <div class="col-md-4 col-sm-6 robotics">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal03"
+                                href="#animatedModal03"
+                                id="demo03">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/plcprogramming1.jpg" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>PLC Programming</span>
+                                            <p>
+                                                PLC-based pick-and-place automation system designed to control a
+                                                robotic arm for bearing detection, transfer, and placement with
+                                                automatic and manual operation modes. Includes start/stop
+                                                control logic and sensor-based movement handling.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
                                                 <span>PLC Programming</span>
-                                                <p>PLC-based pick-and-place automation system designed to control a robotic arm for bearing detection, transfer, and placement with automatic and manual operation modes. Includes start/stop control logic and sensor-based movement handling.</p>
-                                                <div class="portfolio-tech-tags"><span>PLC Programming</span><span>Ladder Logic</span><span>Industrial Automation</span><span>Control Systems</span></div>
+                                                <span>Ladder Logic</span>
+                                                <span>Industrial Automation</span>
+                                                <span>Control Systems</span>
                                             </div>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
-
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 robotics">
-                                <a id="demo04" href="#animatedModal04" class="portfolio_item" data-modal-target="animatedModal04">
-                                    <img src="img/portfolio/abbrobot1.jpg" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>ABB Robot Programming</span>
-                                                <p>Visually guided pick-and-place system developed using an ABB IRB120 robot to detect, sort, and rearrange objects based on size and position through image processing and robotic manipulation.</p>
-                                                <div class="portfolio-tech-tags"><span>MATLAB</span><span>ABB IRB120</span><span>RAPID Programming</span><span>RobotStudio</span><span>Image Processing</span><span>Forward & Inverse Kinematics</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
-
- <!-- ===================Software Projects========== -->
-                              <!-- single work -->
-                            <div class="col-md-4 col-sm-6 programming">
-                                <a id="demo26" href="#animatedModal26" class="portfolio_item" data-modal-target="animatedModal26">
-                                    <img src="img/portfolio/devops.png" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>CI/CD DevOps Pipeline</span>
-                                                <p> Developed using Jenkins, Docker, GitLab, Terraform to automate building, testing, security analysis, containerisation, and deployment of a Spring Boot application across two Azure DTL virtual machines. Features automated rollback, reverse proxy routing, infrastructure-as-code provisioning, and multi-level automated testing.</p>
-                                                <div class="portfolio-tech-tags"><span>DevOps</span><span>Jenkins</span><span>Docker</span><span>GitLab</span><span>Debian 13</span><span>Terraform</span><span>SonarCloud</span><span>Spring Boot</span><span>Gradle</span><span>Selenium</span><span>JUnit 5</span><span>JaCoCo</span><span>CheckStyle</span><span>SpotBugs</span><span>Trivy</span><span>Hadolint</span><span>Nginx</span><span>Azure DTL</span><span>MariaDB</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
-
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 programming">
-                                <a id="demo27" href="#animatedModal27" class="portfolio_item" data-modal-target="animatedModal27">
-                                    <img src="img/portfolio/spolve.jpeg" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>SPOLVE Game Prototype</span>
-                                                <p>Medium-fidelity speech therapy game prototype designed for dual users: children with Childhood Apraxia of Speech and Speech-Language Pathologists (SLPs). Combines speech-based gameplay, personalised lessons, and clinician performance tracking to support home practice.</p>
-                                                <div class="portfolio-tech-tags"><span>Android App Development</span><span>Speech Recognition</span><span>Mobile UI/UX Design</span><span>Game-Based Learning</span><span>Accessibility Design</span><span>User Research</span><span>Usability Testing</span><span>Rapid Prototyping</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
-
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 programming">
-                                <a id="demo19" href="#animatedModal19" class="portfolio_item" data-modal-target="animatedModal19">
-                                    <img src="img/portfolio/vetclinic1.png" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Vet Clinic Appointment System </span>
-                                                <p>Java-based veterinary clinic management system designed to handle appointment scheduling, pet and owner records, and veterinary staff management through a modular package structure and automated entity relationships.</p>
-                                                <div class="portfolio-tech-tags"><span>Java</span><span>Object-Oriented Programming</span><span>CRUD Operations</span><span>Console-Based UI</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
-
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 programming">
-                                <a id="demo06" href="#animatedModal06" class="portfolio_item" data-modal-target="animatedModal06">
-                                    <img src="img/portfolio/foodcatering1.png" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Food Catering Website</span>
-                                                <p>Web application developed for FoodEdge Gourmet Catering to manage catering services, customer profiles, bookings, payments, and business analytics through a responsive and secure platform</p>
-                                                <div class="portfolio-tech-tags"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>Web Development</span><span>Team Collaboration</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
-
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 programming">
-                                <a id="demo05" href="#animatedModal05" class="portfolio_item" data-modal-target="animatedModal05">
-                                    <img src="img/portfolio/beautysalon1.png" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Beauty Salon Website</span>
-                                                <p>Responsive beauty salon website developed for Oracle Beauty Parlor to showcase services, manage customer inquiries and appointments, and provide business information through an interactive and user-friendly platform.</p>
-                                                <div class="portfolio-tech-tags"><span>HTML</span><span>CSS</span><span>MySQL</span><span>UI/UX Design</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
-
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 programming">
-                                <a id="demo07" href="#animatedModal07" class="portfolio_item" data-modal-target="animatedModal07">
-                                    <img src="img/portfolio/votingsystem1.png" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Electral Commission E system</span>
-                                                <p>C++ voting management system developed to support remote voting, candidate registration, voter management, and automated vote counting through a secure and user-friendly console application.</p>
-                                                <div class="portfolio-tech-tags"><span>C++</span><span>Procedural Programming</span><span>File Handling</span><span>Data Management</span><span>Console UI</span><span>Team Collaboration</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
-                            <!-- =================== Design & Simulation ========== -->
-
-                            <div class="col-md-4 col-sm-6 software">
-                                <a id="demo10" href="#animatedModal10" class="portfolio_item" data-modal-target="animatedModal10">
-                                    <img src="img/portfolio/elixir1.png" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Elixir, glasses for the Visually Impaired</span>
-                                                <p>Assistive smart glasses designed to help visually impaired individuals navigate independently using obstacle detection, GPS guidance, echolocation, and voice-assisted interaction</p>
-                                                <div class="portfolio-tech-tags"><span>Solidworks</span><span>3D Modeling</span><span>SOLIDWORKS</span><span>Assistive Technology</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 software">
-                                <a id="demo11" href="#animatedModal11" class="portfolio_item" data-modal-target="animatedModal11">
-                                    <img src="img/portfolio/torchlight1.jpg" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Torchlight Redesign</span>
-                                                <p></p>
-                                                <p>SolidWorks-based torchlight redesign project focused on creating detailed 3D component models to analyze product assembly feasibility and support industrial robotic automation processes.</p>
-                                                <div class="portfolio-tech-tags"><span>CAD Design</span><span>3D Modeling</span><span>SOLIDWORKS</span><span>Industrial Automation</span><span>Product Assembly Analysis</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 software">
-                                <a id="demo12" href="#animatedModal12" class="portfolio_item" data-modal-target="animatedModal12">
-                                    <img src="img/portfolio/bedroom1.png" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Floor plan Drawing</span>
-                                                <p>2D residential floor plan created in AutoCAD to design and visualize room layouts, furniture placement, electrical components, and architectural details with accurate dimensions and layered organization.</p>
-                                                <div class="portfolio-tech-tags"><span>AutoCAD</span><span>CAD Modeling</span><span>Architectural Design</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-
-                            <!-- =================== INITIATIVES ========== -->
-
-                            <div class="col-md-4 col-sm-6 initiatives">
-                                <a id="demo20" href="#animatedModal20" class="portfolio_item" data-modal-target="animatedModal20">
-                                    <img src="img/portfolio/stema1.jpg" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Stem Ambassador</span>
-                                                <p>STEM outreach ambassador delivering hands-on robotics and programming workshops to over 100 primary school students using LEGO SPIKE, Scratch, and micro:bits to promote interest in science and technology.</p>
-                                                <div class="portfolio-tech-tags"><span>Cardiff University &amp; Technocamps</span><span>Robotics Workshops</span><span>Mentorship</span><span>LEGO SPIKE</span><span>Scratch</span><span>micro:bits</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 initiatives">
-                                <a id="demo13" href="#animatedModal13" class="portfolio_item" data-modal-target="animatedModal13">
-                                    <img src="img/portfolio/dininghall1.jpg" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Dining Hall Construction Project</span>
-                                                <p>Volunteered in an Isuzu East Africa CSR project contributing to the planning and construction of an KSh 8.5 million multipurpose hall for Embakasi Girls Secondary School to support education, community activities, and student development.</p>
-                                                <div class="portfolio-tech-tags"><span>Isuzu East Africa</span><span>Construction Management</span><span>Project Planning</span><span>CSR Initiatives</span><span>Community Engagement</span><span>Team Collaboration</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 initiatives">
-                                <a id="demo14" href="#animatedModal14" class="portfolio_item" data-modal-target="animatedModal14">
-                                    <img src="img/portfolio/orientation1.jpg" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Swinburne Orientation Program</span>
-                                                <p>Supported and welcomed new Foundation students during Swinburne Sarawak Orientation Week, helping them settle into university life and contributing to an engaging and supportive student experience.</p>
-                                                <div class="portfolio-tech-tags"><span>Swinburne University of Technology</span><span>Student Mentorship</span><span>Communication</span></spann></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 initiatives">
-                                <a id="demo15" href="#animatedModal15" class="portfolio_item" data-modal-target="animatedModal15">
-                                    <img src="img/portfolio/educationmalaysia1.png" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Malaysia Education</span>
-                                                <p>Volunteered with Education Malaysia to share my academic journey at Swinburne University of Technology and promote Malaysia as a destination for quality education and cultural diversity to prospective international students.</p>
-                                                <div class="portfolio-tech-tags"><span>Student Outreach</span><span>Cross-Cultural Communication</span><span>Public Speaking</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <!-- =================== Hobbies ========== -->
-
-                            <div class="col-md-4 col-sm-6 hobbies">
-                                <a id="demo16" href="#animatedModal16" class="portfolio_item" data-modal-target="animatedModal16">
-                                    <img src="img/portfolio/culturalnight1.jpg" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Performing</span>
-                                                <p>Participated in cultural performances at Swinburne University of Technology as a member of the Africa Unites club, representing African heritage through singing, dancing, and performance arts during multicultural events.</p>
-                                                <div class="portfolio-tech-tags"><span>Performing Arts</span><span>Cultural Representation</span><span>Team Collaboration</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 hobbies">
-                                <a id="demo17" href="#animatedModal17" class="portfolio_item" data-modal-target="animatedModal17">
-                                    <img src="img/portfolio/fut4.jpg" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Futsal</span>
-                                                <p>Played for the Swinburne female futsal team and participated in the MASISWA Tournament and interclub competitions, developing teamwork, discipline, and competitive sports skills through high-intensity matches and training.</p>
-                                                <div class="portfolio-tech-tags"><span>Swinburne Sarawak Female Futsal Team</span><span>Teamwork</span><span>Leadership</span><span>Competitive Sports</span><span>Time Management</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 hobbies">
-                                <a id="demo18" href="#animatedModal18" class="portfolio_item" data-modal-target="animatedModal18">
-                                    <img src="img/portfolio/hair1.jpg" loading="lazy" alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info">
-                                                <span>Braiding</span>
-                                                <p>Started a business alongside my studies, focusing on cultural expression, confidence building, and client styling while sharing the history and significance of African hairstyles within a diverse community.</p>
-                                                <div class="portfolio-tech-tags"><span>Client Communication</span><span>Entrepreneurship</span><span>Community Engagement</span><span>Cultural Representation</span><span>Creativity & Problem Solving</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
+                                </div>
+                            </a>
                         </div>
-                        <!-- end portfolio_container -->
 
-                    </div>
-                    <!-- portfolio -->
-                </div>
-                <!-- end portfolio div -->
-            </div>
-            <!-- end main container -->
-        </div>
-    </div>
-    <!-- ./projects -->
+                        <!-- 16. ABB Robot Programming -->
+                        <div class="col-md-4 col-sm-6 robotics">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal04"
+                                href="#animatedModal04"
+                                id="demo04">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/abbrobot1.jpg" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>ABB Robot Programming</span>
+                                            <p>
+                                                Visually guided pick-and-place system developed using an ABB
+                                                IRB120 robot to detect, sort, and rearrange objects based on
+                                                size and position through image processing and robotic
+                                                manipulation.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>MATLAB</span>
+                                                <span>ABB IRB120</span>
+                                                <span>RAPID Programming</span>
+                                                <span>RobotStudio</span>
+                                                <span>Image Processing</span>
+                                                <span>Forward &amp; Inverse Kinematics</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 17. Electral Commission E system -->
+                        <div class="col-md-4 col-sm-6 programming">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal07"
+                                href="#animatedModal07"
+                                id="demo07">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/votingsystem1.png" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Electral Commission E system</span>
+                                            <p>
+                                                C++ voting management system developed to support remote voting,
+                                                candidate registration, voter management, and automated vote
+                                                counting through a secure and user-friendly console application.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>C++</span>
+                                                <span>Procedural Programming</span>
+                                                <span>File Handling</span>
+                                                <span>Data Management</span>
+                                                <span>Console UI</span>
+                                                <span>Team Collaboration</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 18. Elixir, glasses for the Visually Impaired -->
+                        <div class="col-md-4 col-sm-6 software">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal10"
+                                href="#animatedModal10"
+                                id="demo10">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/elixir1.png" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Elixir, glasses for the Visually Impaired</span>
+                                            <p>
+                                                Assistive smart glasses designed to help visually impaired
+                                                individuals navigate independently using obstacle detection, GPS
+                                                guidance, echolocation, and voice-assisted interaction
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>Solidworks</span>
+                                                <span>3D Modeling</span>
+                                                <span>SOLIDWORKS</span>
+                                                <span>Assistive Technology</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 19. Torchlight Redesign -->
+                        <div class="col-md-4 col-sm-6 software">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal11"
+                                href="#animatedModal11"
+                                id="demo11">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/torchlight1.jpg" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Torchlight Redesign</span>
+                                            <p></p>
+                                            <p>
+                                                SolidWorks-based torchlight redesign project focused on creating
+                                                detailed 3D component models to analyze product assembly
+                                                feasibility and support industrial robotic automation processes.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>CAD Design</span>
+                                                <span>3D Modeling</span>
+                                                <span>SOLIDWORKS</span>
+                                                <span>Industrial Automation</span>
+                                                <span>Product Assembly Analysis</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 20. Floor plan Drawing -->
+                        <div class="col-md-4 col-sm-6 software">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal12"
+                                href="#animatedModal12"
+                                id="demo12">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/bedroom1.png" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Floor plan Drawing</span>
+                                            <p>
+                                                2D residential floor plan created in AutoCAD to design and
+                                                visualize room layouts, furniture placement, electrical
+                                                components, and architectural details with accurate dimensions
+                                                and layered organization.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>AutoCAD</span>
+                                                <span>CAD Modeling</span>
+                                                <span>Architectural Design</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- LEADERSHIP AND COMMUNITY INITIATIVES -->
+
+                        <!-- 21. Stem Ambassador -->
+                        <div class="col-md-4 col-sm-6 initiatives">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal20"
+                                href="#animatedModal20"
+                                id="demo20">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/stema1.jpg" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Stem Ambassador</span>
+                                            <p>
+                                                STEM outreach ambassador delivering hands-on robotics and
+                                                programming workshops to over 100 primary school students using
+                                                LEGO SPIKE, Scratch, and micro:bits to promote interest in
+                                                science and technology.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>Cardiff University &amp; Technocamps</span>
+                                                <span>Robotics Workshops</span>
+                                                <span>Mentorship</span>
+                                                <span>LEGO SPIKE</span>
+                                                <span>Scratch</span>
+                                                <span>micro:bits</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 22. Dining Hall Construction Project -->
+                        <div class="col-md-4 col-sm-6 initiatives">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal13"
+                                href="#animatedModal13"
+                                id="demo13">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/dininghall1.jpg" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Dining Hall Construction Project</span>
+                                            <p>
+                                                Volunteered in an Isuzu East Africa CSR project contributing to
+                                                the planning and construction of an KSh 8.5 million multipurpose
+                                                hall for Embakasi Girls Secondary School to support education,
+                                                community activities, and student development.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>Isuzu East Africa</span>
+                                                <span>Construction Management</span>
+                                                <span>Project Planning</span>
+                                                <span>CSR Initiatives</span>
+                                                <span>Community Engagement</span>
+                                                <span>Team Collaboration</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 23. Swinburne Orientation Program -->
+                        <div class="col-md-4 col-sm-6 initiatives">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal14"
+                                href="#animatedModal14"
+                                id="demo14">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/orientation1.jpg" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Swinburne Orientation Program</span>
+                                            <p>
+                                                Supported and welcomed new Foundation students during Swinburne
+                                                Sarawak Orientation Week, helping them settle into university
+                                                life and contributing to an engaging and supportive student
+                                                experience.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>Swinburne University of Technology</span>
+                                                <span>Student Mentorship</span>
+                                                <span>Communication</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 24. Malaysia Education -->
+                        <div class="col-md-4 col-sm-6 initiatives">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal15"
+                                href="#animatedModal15"
+                                id="demo15">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/educationmalaysia1.png" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Malaysia Education</span>
+                                            <p>
+                                                Volunteered with Education Malaysia to share my academic journey
+                                                at Swinburne University of Technology and promote Malaysia as a
+                                                destination for quality education and cultural diversity to
+                                                prospective international students.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>Student Outreach</span>
+                                                <span>Cross-Cultural Communication</span>
+                                                <span>Public Speaking</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- INTERESTS AND ACTIVITIES -->
+
+                        <!-- 25. Performing -->
+                        <div class="col-md-4 col-sm-6 hobbies">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal16"
+                                href="#animatedModal16"
+                                id="demo16">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/culturalnight1.jpg" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Performing</span>
+                                            <p>
+                                                Participated in cultural performances at Swinburne University of
+                                                Technology as a member of the Africa Unites club, representing
+                                                African heritage through singing, dancing, and performance arts
+                                                during multicultural events.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>Performing Arts</span>
+                                                <span>Cultural Representation</span>
+                                                <span>Team Collaboration</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 26. Futsal -->
+                        <div class="col-md-4 col-sm-6 hobbies">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal17"
+                                href="#animatedModal17"
+                                id="demo17">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/fut4.jpg" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Futsal</span>
+                                            <p>
+                                                Played for the Swinburne female futsal team and participated in
+                                                the MASISWA Tournament and interclub competitions, developing
+                                                teamwork, discipline, and competitive sports skills through
+                                                high-intensity matches and training.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>Swinburne Sarawak Female Futsal Team</span>
+                                                <span>Teamwork</span>
+                                                <span>Leadership</span>
+                                                <span>Competitive Sports</span>
+                                                <span>Time Management</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 27. Braiding -->
+                        <div class="col-md-4 col-sm-6 hobbies">
+                            <a
+                                class="portfolio_item"
+                                data-modal-target="animatedModal18"
+                                href="#animatedModal18"
+                                id="demo18">
+                                <img
+                                    alt="image"
+                                    class="img-responsive"
+                                    loading="lazy"
+                                    src="img/portfolio/hair1.jpg" />
+                                <div class="portfolio_item_hover">
+                                    <div class="portfolio-border clearfix">
+                                        <div class="item_info">
+                                            <span>Braiding</span>
+                                            <p>
+                                                Started a business alongside my studies, focusing on cultural
+                                                expression, confidence building, and client styling while
+                                                sharing the history and significance of African hairstyles
+                                                within a diverse community.
+                                            </p>
+                                            <div class="portfolio-tech-tags">
+                                                <span>Client Communication</span>
+                                                <span>Entrepreneurship</span>
+                                                <span>Community Engagement</span>
+                                                <span>Cultural Representation</span>
+                                                <span>Creativity &amp; Problem Solving</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!--
+                            ARIA PROJECT CARD - intentionally hidden pending IP filing.
+                            Do not uncomment or publish until approved.
+                        <div class="col-md-4 col-sm-6 embedded programming">
+                            <div class="project-card-with-links">
+                                <a
+                                    id="demo29"
+                                    href="#animatedModal29"
+                                    class="portfolio_item portfolio-card-main"
+                                    data-modal-target="animatedModal29">
+                                    <img
+                                        src="img/portfolio/aria-driver-companion.svg"
+                                        loading="lazy"
+                                        alt="ARIA human-centred driver alertness companion interactive demonstration"
+                                        class="img-responsive" />
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info">
+                                                <span>ARIA: Human-Centred Driver Alertness Companion</span>
+                                                <p>
+                                                    Embedded automotive companion concept and prototype in
+                                                    development, designed to work alongside existing
+                                                    driver-monitoring systems through context-aware software,
+                                                    haptic seat feedback, and short voice interactions.
+                                                </p>
+                                                <div class="portfolio-tech-tags">
+                                                    <span>Embedded Systems</span>
+                                                    <span>Automotive Systems</span>
+                                                    <span>Raspberry Pi</span>
+                                                    <span>Embedded Linux</span>
+                                                    <span>Python</span>
+                                                    <span>Driver Monitoring Integration</span>
+                                                    <span>Haptic Feedback</span>
+                                                    <span>Voice Interaction</span>
+                                                    <span>Human–Machine Interaction</span>
+                                                    <span>System Architecture</span>
+                                                    <span>Hardware–Software Integration</span>
+                                                    <span>Prototype Development</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="portfolio-card-actions">
+                                    <a
+                                        href="#animatedModal29"
+                                        class="portfolio-action-link"
+                                        onclick="document.getElementById('demo29').click(); return false;">
+                                        Learn More ↗
+                                    </a>
+                                    <a
+                                        href="projects/aria/ARIA_Driver_Companion_Interactive_Demo_Kelly_Dianga.html"
+                                        class="portfolio-action-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        Launch Interactive Demo ↗
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                    </div><!-- /.portfolio_container -->
+                </div><!-- /.portfolio -->
+            </div><!-- /.portfolio-div -->
+        </div><!-- /.main-container -->
+    </div><!-- /.container -->
+</div><!-- /#projects -->
+
+
 
   <!-- Experience -->
 <div class="section" id="experience">
